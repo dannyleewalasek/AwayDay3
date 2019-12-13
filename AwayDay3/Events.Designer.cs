@@ -323,7 +323,7 @@
             // rdbFacilitatedNo
             // 
             this.rdbFacilitatedNo.AutoSize = true;
-            this.rdbFacilitatedNo.Location = new System.Drawing.Point(203, 25);
+            this.rdbFacilitatedNo.Location = new System.Drawing.Point(222, 25);
             this.rdbFacilitatedNo.Name = "rdbFacilitatedNo";
             this.rdbFacilitatedNo.Size = new System.Drawing.Size(39, 17);
             this.rdbFacilitatedNo.TabIndex = 77;
