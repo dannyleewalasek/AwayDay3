@@ -21,5 +21,20 @@ namespace AwayDay3
         {
 
         }
+
+        private void btnEvent_Click(object sender, EventArgs e)
+        {
+            Events openForm = new Events();
+            openForm.Show();
+            Visible = false;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Account openForm = new Account();
+            openForm.Show();
+            Visible = false;
+        }
     }
 }

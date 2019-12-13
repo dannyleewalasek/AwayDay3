@@ -23,5 +23,20 @@ namespace AwayDay3
             openForm.Show();
             Visible = false;
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Main openForm = new Main();
+            openForm.Show();
+            Visible = false;
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            Main openForm = new Main();
+            openForm.Show();
+            Visible = false;
+
+        }
     }
 }

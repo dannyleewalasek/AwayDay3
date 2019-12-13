@@ -54,12 +54,14 @@
             this.lblUnpaid = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnEvent = new System.Windows.Forms.Button();
+            this.gbxDetails = new System.Windows.Forms.GroupBox();
+            this.gbxCommunication = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(91, 38);
+            this.lblFirstName.Location = new System.Drawing.Point(72, 40);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(57, 13);
             this.lblFirstName.TabIndex = 0;
@@ -68,7 +70,7 @@
             // lblPayments
             // 
             this.lblPayments.AutoSize = true;
-            this.lblPayments.Location = new System.Drawing.Point(58, 291);
+            this.lblPayments.Location = new System.Drawing.Point(39, 293);
             this.lblPayments.Name = "lblPayments";
             this.lblPayments.Size = new System.Drawing.Size(92, 13);
             this.lblPayments.TabIndex = 1;
@@ -77,7 +79,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(90, 65);
+            this.lblLastName.Location = new System.Drawing.Point(71, 67);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(58, 13);
             this.lblLastName.TabIndex = 2;
@@ -86,7 +88,7 @@
             // lblBusinessName
             // 
             this.lblBusinessName.AutoSize = true;
-            this.lblBusinessName.Location = new System.Drawing.Point(68, 92);
+            this.lblBusinessName.Location = new System.Drawing.Point(49, 94);
             this.lblBusinessName.Name = "lblBusinessName";
             this.lblBusinessName.Size = new System.Drawing.Size(80, 13);
             this.lblBusinessName.TabIndex = 3;
@@ -95,7 +97,7 @@
             // lblBusinessEmail
             // 
             this.lblBusinessEmail.AutoSize = true;
-            this.lblBusinessEmail.Location = new System.Drawing.Point(72, 143);
+            this.lblBusinessEmail.Location = new System.Drawing.Point(53, 145);
             this.lblBusinessEmail.Name = "lblBusinessEmail";
             this.lblBusinessEmail.Size = new System.Drawing.Size(77, 13);
             this.lblBusinessEmail.TabIndex = 5;
@@ -104,7 +106,7 @@
             // lblBusinessAddress
             // 
             this.lblBusinessAddress.AutoSize = true;
-            this.lblBusinessAddress.Location = new System.Drawing.Point(59, 170);
+            this.lblBusinessAddress.Location = new System.Drawing.Point(40, 172);
             this.lblBusinessAddress.Name = "lblBusinessAddress";
             this.lblBusinessAddress.Size = new System.Drawing.Size(90, 13);
             this.lblBusinessAddress.TabIndex = 6;
@@ -113,7 +115,7 @@
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(125, 197);
+            this.lblCity.Location = new System.Drawing.Point(106, 199);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(24, 13);
             this.lblCity.TabIndex = 7;
@@ -122,7 +124,7 @@
             // lblPostCode
             // 
             this.lblPostCode.AutoSize = true;
-            this.lblPostCode.Location = new System.Drawing.Point(93, 224);
+            this.lblPostCode.Location = new System.Drawing.Point(74, 226);
             this.lblPostCode.Name = "lblPostCode";
             this.lblPostCode.Size = new System.Drawing.Size(56, 13);
             this.lblPostCode.TabIndex = 8;
@@ -131,7 +133,7 @@
             // lblBusinessPhone
             // 
             this.lblBusinessPhone.AutoSize = true;
-            this.lblBusinessPhone.Location = new System.Drawing.Point(66, 251);
+            this.lblBusinessPhone.Location = new System.Drawing.Point(47, 253);
             this.lblBusinessPhone.Name = "lblBusinessPhone";
             this.lblBusinessPhone.Size = new System.Drawing.Size(83, 13);
             this.lblBusinessPhone.TabIndex = 9;
@@ -139,63 +141,63 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(155, 38);
+            this.txtFirstName.Location = new System.Drawing.Point(136, 40);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtFirstName.TabIndex = 10;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(155, 65);
+            this.txtLastName.Location = new System.Drawing.Point(136, 67);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 20);
             this.txtLastName.TabIndex = 11;
             // 
             // txtBusinessName
             // 
-            this.txtBusinessName.Location = new System.Drawing.Point(155, 92);
+            this.txtBusinessName.Location = new System.Drawing.Point(136, 94);
             this.txtBusinessName.Name = "txtBusinessName";
             this.txtBusinessName.Size = new System.Drawing.Size(100, 20);
             this.txtBusinessName.TabIndex = 12;
             // 
             // txtBusinessEmail
             // 
-            this.txtBusinessEmail.Location = new System.Drawing.Point(156, 143);
+            this.txtBusinessEmail.Location = new System.Drawing.Point(137, 145);
             this.txtBusinessEmail.Name = "txtBusinessEmail";
             this.txtBusinessEmail.Size = new System.Drawing.Size(100, 20);
             this.txtBusinessEmail.TabIndex = 14;
             // 
             // txtBusinessAddress
             // 
-            this.txtBusinessAddress.Location = new System.Drawing.Point(155, 170);
+            this.txtBusinessAddress.Location = new System.Drawing.Point(136, 172);
             this.txtBusinessAddress.Name = "txtBusinessAddress";
             this.txtBusinessAddress.Size = new System.Drawing.Size(100, 20);
             this.txtBusinessAddress.TabIndex = 15;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(155, 196);
+            this.txtCity.Location = new System.Drawing.Point(136, 198);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(100, 20);
             this.txtCity.TabIndex = 16;
             // 
             // txtBusinessPhone
             // 
-            this.txtBusinessPhone.Location = new System.Drawing.Point(155, 252);
+            this.txtBusinessPhone.Location = new System.Drawing.Point(136, 254);
             this.txtBusinessPhone.Name = "txtBusinessPhone";
             this.txtBusinessPhone.Size = new System.Drawing.Size(100, 20);
             this.txtBusinessPhone.TabIndex = 18;
             // 
             // txtPostCode
             // 
-            this.txtPostCode.Location = new System.Drawing.Point(155, 224);
+            this.txtPostCode.Location = new System.Drawing.Point(136, 226);
             this.txtPostCode.Name = "txtPostCode";
             this.txtPostCode.Size = new System.Drawing.Size(100, 20);
             this.txtPostCode.TabIndex = 19;
             // 
             // txtDepartment
             // 
-            this.txtDepartment.Location = new System.Drawing.Point(155, 118);
+            this.txtDepartment.Location = new System.Drawing.Point(136, 120);
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.Size = new System.Drawing.Size(100, 20);
             this.txtDepartment.TabIndex = 22;
@@ -203,7 +205,7 @@
             // lblDepartment
             // 
             this.lblDepartment.AutoSize = true;
-            this.lblDepartment.Location = new System.Drawing.Point(86, 118);
+            this.lblDepartment.Location = new System.Drawing.Point(67, 120);
             this.lblDepartment.Name = "lblDepartment";
             this.lblDepartment.Size = new System.Drawing.Size(62, 13);
             this.lblDepartment.TabIndex = 21;
@@ -211,7 +213,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(267, 40);
+            this.textBox1.Location = new System.Drawing.Point(276, 42);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(156, 232);
@@ -220,7 +222,7 @@
             // lblCommunication
             // 
             this.lblCommunication.AutoSize = true;
-            this.lblCommunication.Location = new System.Drawing.Point(264, 24);
+            this.lblCommunication.Location = new System.Drawing.Point(276, 26);
             this.lblCommunication.Name = "lblCommunication";
             this.lblCommunication.Size = new System.Drawing.Size(79, 13);
             this.lblCommunication.TabIndex = 24;
@@ -229,7 +231,7 @@
             // lblDisplayPayment
             // 
             this.lblDisplayPayment.AutoSize = true;
-            this.lblDisplayPayment.Location = new System.Drawing.Point(154, 291);
+            this.lblDisplayPayment.Location = new System.Drawing.Point(135, 293);
             this.lblDisplayPayment.Name = "lblDisplayPayment";
             this.lblDisplayPayment.Size = new System.Drawing.Size(28, 13);
             this.lblDisplayPayment.TabIndex = 25;
@@ -238,7 +240,7 @@
             // lblDisplayUnpaid
             // 
             this.lblDisplayUnpaid.AutoSize = true;
-            this.lblDisplayUnpaid.Location = new System.Drawing.Point(154, 313);
+            this.lblDisplayUnpaid.Location = new System.Drawing.Point(135, 315);
             this.lblDisplayUnpaid.Name = "lblDisplayUnpaid";
             this.lblDisplayUnpaid.Size = new System.Drawing.Size(28, 13);
             this.lblDisplayUnpaid.TabIndex = 27;
@@ -247,7 +249,7 @@
             // lblUnpaid
             // 
             this.lblUnpaid.AutoSize = true;
-            this.lblUnpaid.Location = new System.Drawing.Point(107, 313);
+            this.lblUnpaid.Location = new System.Drawing.Point(88, 315);
             this.lblUnpaid.Name = "lblUnpaid";
             this.lblUnpaid.Size = new System.Drawing.Size(41, 13);
             this.lblUnpaid.TabIndex = 26;
@@ -255,7 +257,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(348, 284);
+            this.btnUpdate.Location = new System.Drawing.Point(357, 286);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 42);
             this.btnUpdate.TabIndex = 73;
@@ -264,12 +266,29 @@
             // 
             // btnEvent
             // 
-            this.btnEvent.Location = new System.Drawing.Point(267, 284);
+            this.btnEvent.Location = new System.Drawing.Point(276, 286);
             this.btnEvent.Name = "btnEvent";
             this.btnEvent.Size = new System.Drawing.Size(75, 42);
             this.btnEvent.TabIndex = 72;
-            this.btnEvent.Text = "Event";
+            this.btnEvent.Text = "New Event";
             this.btnEvent.UseVisualStyleBackColor = true;
+            this.btnEvent.Click += new System.EventHandler(this.btnEvent_Click);
+            // 
+            // gbxDetails
+            // 
+            this.gbxDetails.Location = new System.Drawing.Point(31, 12);
+            this.gbxDetails.Name = "gbxDetails";
+            this.gbxDetails.Size = new System.Drawing.Size(213, 322);
+            this.gbxDetails.TabIndex = 74;
+            this.gbxDetails.TabStop = false;
+            // 
+            // gbxCommunication
+            // 
+            this.gbxCommunication.Location = new System.Drawing.Point(264, 14);
+            this.gbxCommunication.Name = "gbxCommunication";
+            this.gbxCommunication.Size = new System.Drawing.Size(178, 322);
+            this.gbxCommunication.TabIndex = 75;
+            this.gbxCommunication.TabStop = false;
             // 
             // Account
             // 
@@ -302,8 +321,11 @@
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblPayments);
             this.Controls.Add(this.lblFirstName);
+            this.Controls.Add(this.gbxDetails);
+            this.Controls.Add(this.gbxCommunication);
             this.Name = "Account";
             this.Text = "Account";
+            this.Load += new System.EventHandler(this.Account_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +359,7 @@
         private System.Windows.Forms.Label lblUnpaid;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnEvent;
+        private System.Windows.Forms.GroupBox gbxDetails;
+        private System.Windows.Forms.GroupBox gbxCommunication;
     }
 }

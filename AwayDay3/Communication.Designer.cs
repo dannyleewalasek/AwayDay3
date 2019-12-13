@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBack = new System.Windows.Forms.Button();
             this.txtCommunication = new System.Windows.Forms.TextBox();
             this.lblCommunication = new System.Windows.Forms.Label();
             this.lblUpdatedDate = new System.Windows.Forms.Label();
@@ -37,18 +36,9 @@
             this.lblAddedOn = new System.Windows.Forms.Label();
             this.txtFindClient = new System.Windows.Forms.TextBox();
             this.lblFindClient = new System.Windows.Forms.Label();
-            this.btnInbox = new System.Windows.Forms.Button();
-            this.btnSendMessage = new System.Windows.Forms.Button();
+            this.btnImportMessage = new System.Windows.Forms.Button();
+            this.gbxCommunication = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(474, 79);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 42);
-            this.btnBack.TabIndex = 26;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
             // 
             // txtCommunication
             // 
@@ -57,7 +47,8 @@
             this.txtCommunication.Name = "txtCommunication";
             this.txtCommunication.Size = new System.Drawing.Size(433, 152);
             this.txtCommunication.TabIndex = 25;
-            this.txtCommunication.Text = "Day Away Query recieved on 25/03/18";
+            this.txtCommunication.Text = "Day Away Query recieved on 25/03/18 // this will display data pulled form databas" +
+    "e";
             // 
             // lblCommunication
             // 
@@ -121,30 +112,29 @@
             this.lblFindClient.TabIndex = 18;
             this.lblFindClient.Text = "Find Client";
             // 
-            // btnInbox
+            // btnImportMessage
             // 
-            this.btnInbox.Location = new System.Drawing.Point(393, 79);
-            this.btnInbox.Name = "btnInbox";
-            this.btnInbox.Size = new System.Drawing.Size(75, 42);
-            this.btnInbox.TabIndex = 17;
-            this.btnInbox.Text = "Inbox";
-            this.btnInbox.UseVisualStyleBackColor = true;
+            this.btnImportMessage.Location = new System.Drawing.Point(474, 88);
+            this.btnImportMessage.Name = "btnImportMessage";
+            this.btnImportMessage.Size = new System.Drawing.Size(75, 42);
+            this.btnImportMessage.TabIndex = 16;
+            this.btnImportMessage.Text = "Import Messages";
+            this.btnImportMessage.UseVisualStyleBackColor = true;
+            this.btnImportMessage.Click += new System.EventHandler(this.btnImportMessage_Click);
             // 
-            // btnSendMessage
+            // gbxCommunication
             // 
-            this.btnSendMessage.Location = new System.Drawing.Point(312, 79);
-            this.btnSendMessage.Name = "btnSendMessage";
-            this.btnSendMessage.Size = new System.Drawing.Size(75, 42);
-            this.btnSendMessage.TabIndex = 16;
-            this.btnSendMessage.Text = "Send Messages";
-            this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.gbxCommunication.Location = new System.Drawing.Point(12, 7);
+            this.gbxCommunication.Name = "gbxCommunication";
+            this.gbxCommunication.Size = new System.Drawing.Size(551, 294);
+            this.gbxCommunication.TabIndex = 75;
+            this.gbxCommunication.TabStop = false;
             // 
             // Communication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnBack);
+            this.ClientSize = new System.Drawing.Size(584, 324);
             this.Controls.Add(this.txtCommunication);
             this.Controls.Add(this.lblCommunication);
             this.Controls.Add(this.lblUpdatedDate);
@@ -153,9 +143,10 @@
             this.Controls.Add(this.lblAddedOn);
             this.Controls.Add(this.txtFindClient);
             this.Controls.Add(this.lblFindClient);
-            this.Controls.Add(this.btnInbox);
-            this.Controls.Add(this.btnSendMessage);
+            this.Controls.Add(this.btnImportMessage);
+            this.Controls.Add(this.gbxCommunication);
             this.Name = "Communication";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Communication";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,8 +154,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtCommunication;
         private System.Windows.Forms.Label lblCommunication;
         private System.Windows.Forms.Label lblUpdatedDate;
@@ -173,7 +162,7 @@
         private System.Windows.Forms.Label lblAddedOn;
         private System.Windows.Forms.TextBox txtFindClient;
         private System.Windows.Forms.Label lblFindClient;
-        private System.Windows.Forms.Button btnInbox;
-        private System.Windows.Forms.Button btnSendMessage;
+        private System.Windows.Forms.Button btnImportMessage;
+        private System.Windows.Forms.GroupBox gbxCommunication;
     }
 }

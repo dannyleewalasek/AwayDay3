@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AwayDay3
 {
-    public partial class btnEstimateCost : Form
+    public partial class Events : Form
     {
-        public btnEstimateCost()
+        public Events()
         {
             InitializeComponent();
         }
@@ -40,6 +40,13 @@ namespace AwayDay3
         private void txtCost_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            Main openForm = new Main();
+            openForm.Show();
+            Visible = false;
         }
     }
 }

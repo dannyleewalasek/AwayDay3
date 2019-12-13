@@ -47,11 +47,14 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.btnEvent = new System.Windows.Forms.Button();
+            this.btnShowAccount = new System.Windows.Forms.Button();
+            this.gbxRegistration = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // txtDepartment
             // 
-            this.txtDepartment.Location = new System.Drawing.Point(143, 123);
+            this.txtDepartment.Location = new System.Drawing.Point(188, 112);
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.Size = new System.Drawing.Size(100, 20);
             this.txtDepartment.TabIndex = 42;
@@ -59,7 +62,7 @@
             // lblDepartment
             // 
             this.lblDepartment.AutoSize = true;
-            this.lblDepartment.Location = new System.Drawing.Point(74, 123);
+            this.lblDepartment.Location = new System.Drawing.Point(119, 112);
             this.lblDepartment.Name = "lblDepartment";
             this.lblDepartment.Size = new System.Drawing.Size(62, 13);
             this.lblDepartment.TabIndex = 41;
@@ -67,56 +70,56 @@
             // 
             // txtPostCode
             // 
-            this.txtPostCode.Location = new System.Drawing.Point(143, 229);
+            this.txtPostCode.Location = new System.Drawing.Point(188, 218);
             this.txtPostCode.Name = "txtPostCode";
             this.txtPostCode.Size = new System.Drawing.Size(100, 20);
             this.txtPostCode.TabIndex = 40;
             // 
             // txtBusinessPhone
             // 
-            this.txtBusinessPhone.Location = new System.Drawing.Point(143, 257);
+            this.txtBusinessPhone.Location = new System.Drawing.Point(188, 246);
             this.txtBusinessPhone.Name = "txtBusinessPhone";
             this.txtBusinessPhone.Size = new System.Drawing.Size(100, 20);
             this.txtBusinessPhone.TabIndex = 39;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(143, 201);
+            this.txtCity.Location = new System.Drawing.Point(188, 190);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(100, 20);
             this.txtCity.TabIndex = 38;
             // 
             // txtBusinessAddress
             // 
-            this.txtBusinessAddress.Location = new System.Drawing.Point(143, 175);
+            this.txtBusinessAddress.Location = new System.Drawing.Point(188, 164);
             this.txtBusinessAddress.Name = "txtBusinessAddress";
             this.txtBusinessAddress.Size = new System.Drawing.Size(100, 20);
             this.txtBusinessAddress.TabIndex = 37;
             // 
             // txtBusinessEmail
             // 
-            this.txtBusinessEmail.Location = new System.Drawing.Point(144, 148);
+            this.txtBusinessEmail.Location = new System.Drawing.Point(189, 137);
             this.txtBusinessEmail.Name = "txtBusinessEmail";
             this.txtBusinessEmail.Size = new System.Drawing.Size(100, 20);
             this.txtBusinessEmail.TabIndex = 36;
             // 
             // txtBusinessName
             // 
-            this.txtBusinessName.Location = new System.Drawing.Point(143, 97);
+            this.txtBusinessName.Location = new System.Drawing.Point(188, 86);
             this.txtBusinessName.Name = "txtBusinessName";
             this.txtBusinessName.Size = new System.Drawing.Size(100, 20);
             this.txtBusinessName.TabIndex = 35;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(143, 70);
+            this.txtLastName.Location = new System.Drawing.Point(188, 59);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 20);
             this.txtLastName.TabIndex = 34;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(143, 43);
+            this.txtFirstName.Location = new System.Drawing.Point(188, 32);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtFirstName.TabIndex = 33;
@@ -124,7 +127,7 @@
             // lblBusinessPhone
             // 
             this.lblBusinessPhone.AutoSize = true;
-            this.lblBusinessPhone.Location = new System.Drawing.Point(54, 256);
+            this.lblBusinessPhone.Location = new System.Drawing.Point(99, 245);
             this.lblBusinessPhone.Name = "lblBusinessPhone";
             this.lblBusinessPhone.Size = new System.Drawing.Size(83, 13);
             this.lblBusinessPhone.TabIndex = 32;
@@ -133,7 +136,7 @@
             // lblPostCode
             // 
             this.lblPostCode.AutoSize = true;
-            this.lblPostCode.Location = new System.Drawing.Point(81, 229);
+            this.lblPostCode.Location = new System.Drawing.Point(126, 218);
             this.lblPostCode.Name = "lblPostCode";
             this.lblPostCode.Size = new System.Drawing.Size(56, 13);
             this.lblPostCode.TabIndex = 31;
@@ -142,7 +145,7 @@
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(113, 202);
+            this.lblCity.Location = new System.Drawing.Point(158, 191);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(24, 13);
             this.lblCity.TabIndex = 30;
@@ -151,7 +154,7 @@
             // lblBusinessAddress
             // 
             this.lblBusinessAddress.AutoSize = true;
-            this.lblBusinessAddress.Location = new System.Drawing.Point(47, 175);
+            this.lblBusinessAddress.Location = new System.Drawing.Point(92, 164);
             this.lblBusinessAddress.Name = "lblBusinessAddress";
             this.lblBusinessAddress.Size = new System.Drawing.Size(90, 13);
             this.lblBusinessAddress.TabIndex = 29;
@@ -160,7 +163,7 @@
             // lblBusinessEmail
             // 
             this.lblBusinessEmail.AutoSize = true;
-            this.lblBusinessEmail.Location = new System.Drawing.Point(60, 148);
+            this.lblBusinessEmail.Location = new System.Drawing.Point(105, 137);
             this.lblBusinessEmail.Name = "lblBusinessEmail";
             this.lblBusinessEmail.Size = new System.Drawing.Size(77, 13);
             this.lblBusinessEmail.TabIndex = 28;
@@ -169,7 +172,7 @@
             // lblBusinessName
             // 
             this.lblBusinessName.AutoSize = true;
-            this.lblBusinessName.Location = new System.Drawing.Point(56, 97);
+            this.lblBusinessName.Location = new System.Drawing.Point(101, 86);
             this.lblBusinessName.Name = "lblBusinessName";
             this.lblBusinessName.Size = new System.Drawing.Size(80, 13);
             this.lblBusinessName.TabIndex = 27;
@@ -178,7 +181,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(78, 70);
+            this.lblLastName.Location = new System.Drawing.Point(123, 59);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(58, 13);
             this.lblLastName.TabIndex = 26;
@@ -187,7 +190,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(79, 43);
+            this.lblFirstName.Location = new System.Drawing.Point(124, 32);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(57, 13);
             this.lblFirstName.TabIndex = 25;
@@ -195,19 +198,49 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(258, 237);
+            this.btnRegister.Location = new System.Drawing.Point(132, 283);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(150, 40);
+            this.btnRegister.Size = new System.Drawing.Size(75, 42);
             this.btnRegister.TabIndex = 43;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnEvent
+            // 
+            this.btnEvent.Location = new System.Drawing.Point(213, 284);
+            this.btnEvent.Name = "btnEvent";
+            this.btnEvent.Size = new System.Drawing.Size(75, 42);
+            this.btnEvent.TabIndex = 73;
+            this.btnEvent.Text = "New Event";
+            this.btnEvent.UseVisualStyleBackColor = true;
+            this.btnEvent.Click += new System.EventHandler(this.btnEvent_Click);
+            // 
+            // btnShowAccount
+            // 
+            this.btnShowAccount.Location = new System.Drawing.Point(387, 284);
+            this.btnShowAccount.Name = "btnShowAccount";
+            this.btnShowAccount.Size = new System.Drawing.Size(75, 42);
+            this.btnShowAccount.TabIndex = 74;
+            this.btnShowAccount.Text = "Show Account";
+            this.btnShowAccount.UseVisualStyleBackColor = true;
+            this.btnShowAccount.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // gbxRegistration
+            // 
+            this.gbxRegistration.Location = new System.Drawing.Point(76, 12);
+            this.gbxRegistration.Name = "gbxRegistration";
+            this.gbxRegistration.Size = new System.Drawing.Size(227, 329);
+            this.gbxRegistration.TabIndex = 75;
+            this.gbxRegistration.TabStop = false;
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.btnShowAccount);
+            this.Controls.Add(this.btnEvent);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtDepartment);
             this.Controls.Add(this.lblDepartment);
@@ -227,7 +260,9 @@
             this.Controls.Add(this.lblBusinessName);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblFirstName);
+            this.Controls.Add(this.gbxRegistration);
             this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -255,5 +290,8 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnEvent;
+        private System.Windows.Forms.Button btnShowAccount;
+        private System.Windows.Forms.GroupBox gbxRegistration;
     }
 }

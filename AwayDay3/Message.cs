@@ -10,23 +10,18 @@ using System.Windows.Forms;
 
 namespace AwayDay3
 {
-    public partial class Account : Form
+    public partial class Message : Form
     {
-        public Account()
+        public Message()
         {
             InitializeComponent();
         }
 
-        private void btnEvent_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            Events openForm = new Events();
+            Main openForm = new Main();
             openForm.Show();
             Visible = false;
-        }
-
-        private void Account_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

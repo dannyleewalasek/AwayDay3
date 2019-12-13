@@ -16,5 +16,12 @@ namespace AwayDay3
         {
             InitializeComponent();
         }
+
+        private void btnImportMessage_Click(object sender, EventArgs e)
+        {
+            Main openForm = new Main();
+            openForm.Show();
+            Visible = false;
+        }
     }
 }

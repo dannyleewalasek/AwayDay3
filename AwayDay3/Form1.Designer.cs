@@ -36,6 +36,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.gbxSignup = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // btnSignup
@@ -108,6 +109,15 @@
             this.btnSubmit.TabIndex = 7;
             this.btnSubmit.Text = "Sign Up";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // gbxSignup
+            // 
+            this.gbxSignup.Location = new System.Drawing.Point(69, 33);
+            this.gbxSignup.Name = "gbxSignup";
+            this.gbxSignup.Size = new System.Drawing.Size(347, 295);
+            this.gbxSignup.TabIndex = 76;
+            this.gbxSignup.TabStop = false;
             // 
             // Form1
             // 
@@ -122,6 +132,7 @@
             this.Controls.Add(this.lblSignup);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnSignup);
+            this.Controls.Add(this.gbxSignup);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -140,6 +151,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.GroupBox gbxSignup;
     }
 }
 
