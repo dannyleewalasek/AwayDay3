@@ -33,9 +33,16 @@ namespace AwayDay3
 
         private void Account_Load(object sender, EventArgs e)
         {
+            txtFirstName.Text = logic.loggedInCompany.firstName;
+            txtLastName.Text = logic.loggedInCompany.lastName;
             txtBusinessName.Text = logic.loggedInCompany.CompanyName;
             txtDepartment.Text = logic.loggedInDepartment.DepartmentName;
             txtBusinessEmail.Text = logic.loggedInCompany.companyEmail;
+            txtCity.Text = logic.loggedInCompany.city;
+            txtBusinessAddress.Text = logic.loggedInCompany.address;
+            txtPostCode.Text = logic.loggedInCompany.postCode;
+            txtBusinessPhone.Text = logic.loggedInCompany.phone;
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
