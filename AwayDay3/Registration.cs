@@ -25,7 +25,8 @@ namespace AwayDay3
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            txtstatus.Text = logic.Register(txtBusinessName.Text, txtDepartment.Text, txtBusinessEmail.Text);
+            txtstatus.Text = logic.Register(txtFirstName.Text,txtLastName.Text, txtBusinessName.Text, txtDepartment.Text, 
+                                            txtBusinessEmail.Text, txtBusinessAddress.Text,txtCity.Text,txtPostCode.Text,txtBusinessPhone.Text);
         }
 
         private void btnEvent_Click(object sender, EventArgs e)

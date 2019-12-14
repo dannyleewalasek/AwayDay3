@@ -23,7 +23,8 @@ namespace AwayDay3
             database.UpdateCustomer(loggedInCompany);
         }
 
-        public String Register(String companyName, String departmentName, String companyEmail)
+        public String Register(String fName, String lName, String companyName, String departmentName, String companyEmail, 
+                                String address, String city, String postCode, String phoneNumber)
         {
             //See if company is already registered
             List<Company> companys = database.GetCompanys();
@@ -46,7 +47,8 @@ namespace AwayDay3
             //If company nor department exist, create new c & d
             if (departmentFound == false && companyFound == false)
             {
-                database.AddCustomer(companyName, departmentName, companyEmail);
+                database.AddCustomer(fName, lName, companyName, departmentName, companyEmail, address, city, postCode, phoneNumber);
+                logIn(companyName, departmentName);
                 return "Company and department registered";
             }
 
