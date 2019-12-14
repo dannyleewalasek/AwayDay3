@@ -47,7 +47,15 @@ namespace AwayDay3
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            logic.UpdateCompany(txtBusinessEmail.Text);
+            logic.loggedInCompany.firstName = txtFirstName.Text;
+            logic.loggedInCompany.lastName = txtLastName.Text;
+            logic.loggedInCompany.CompanyName = txtBusinessName.Text;
+            logic.loggedInDepartment.DepartmentName = txtDepartment.Text;
+            logic.loggedInCompany.companyEmail = txtBusinessEmail.Text;
+            logic.loggedInCompany.city = txtCity.Text;
+            logic.loggedInCompany.address = txtBusinessAddress.Text;
+            logic.loggedInCompany.postCode = txtPostCode.Text;
+            logic.loggedInCompany.phone = txtBusinessPhone.Text;
         }
     }
 }

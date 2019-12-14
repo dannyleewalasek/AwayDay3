@@ -19,7 +19,6 @@ namespace AwayDay3
 
         public void UpdateCompany(String emailAddress)
         {
-            loggedInCompany.companyEmail = emailAddress;
             database.UpdateCustomer(loggedInCompany);
         }
 
