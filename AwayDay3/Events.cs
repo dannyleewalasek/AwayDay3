@@ -12,9 +12,15 @@ namespace AwayDay3
 {
     public partial class Events : Form
     {
+        private MainLogic logic;
         public Events()
         {
             InitializeComponent();
+        }
+        public Events(MainLogic logic)
+        {
+            InitializeComponent();
+            this.logic = logic;
         }
 
         private void btnEstimateCost_Load(object sender, EventArgs e)

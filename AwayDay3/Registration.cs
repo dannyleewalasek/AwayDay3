@@ -12,14 +12,20 @@ namespace AwayDay3
 {
     public partial class Registration : Form
     {
+        private MainLogic logic;
         public Registration()
         {
             InitializeComponent();
         }
+        public Registration(MainLogic logic)
+        {
+            InitializeComponent();
+            this.logic = logic;
+        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            txtstatus.Text = logic.Register(txtBusinessName.Text, txtDepartment.Text, txtBusinessEmail.Text);
         }
 
         private void btnEvent_Click(object sender, EventArgs e)
@@ -32,9 +38,10 @@ namespace AwayDay3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Account openForm = new Account();
+            Account openForm = new Account(logic);
             openForm.Show();
             Visible = false;
         }
+        
     }
 }

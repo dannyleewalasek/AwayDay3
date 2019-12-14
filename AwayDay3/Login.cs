@@ -12,9 +12,15 @@ namespace AwayDay3
 {
     public partial class Login : Form
     {
+        MainLogic logic;
         public Login()
         {
             InitializeComponent();
+        }
+        public Login(MainLogic logic)
+        {
+            InitializeComponent();
+            this.logic = logic;
         }
 
         private void btnSignup_Click(object sender, EventArgs e)
@@ -36,6 +42,11 @@ namespace AwayDay3
             Main openForm = new Main();
             openForm.Show();
             Visible = false;
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
 
         }
     }

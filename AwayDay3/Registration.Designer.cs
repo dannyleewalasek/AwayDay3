@@ -50,6 +50,7 @@
             this.btnEvent = new System.Windows.Forms.Button();
             this.btnShowAccount = new System.Windows.Forms.Button();
             this.gbxRegistration = new System.Windows.Forms.GroupBox();
+            this.txtstatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDepartment
@@ -234,11 +235,21 @@
             this.gbxRegistration.TabIndex = 75;
             this.gbxRegistration.TabStop = false;
             // 
+            // txtstatus
+            // 
+            this.txtstatus.AutoSize = true;
+            this.txtstatus.Location = new System.Drawing.Point(387, 111);
+            this.txtstatus.Name = "txtstatus";
+            this.txtstatus.Size = new System.Drawing.Size(35, 13);
+            this.txtstatus.TabIndex = 76;
+            this.txtstatus.Text = "label1";
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.txtstatus);
             this.Controls.Add(this.btnShowAccount);
             this.Controls.Add(this.btnEvent);
             this.Controls.Add(this.btnRegister);
@@ -293,5 +304,6 @@
         private System.Windows.Forms.Button btnEvent;
         private System.Windows.Forms.Button btnShowAccount;
         private System.Windows.Forms.GroupBox gbxRegistration;
+        private System.Windows.Forms.Label txtstatus;
     }
 }

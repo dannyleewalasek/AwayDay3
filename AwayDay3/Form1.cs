@@ -12,6 +12,7 @@ namespace AwayDay3
 {
     public partial class Form1 : Form
     {
+        private MainLogic logic = new MainLogic();
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +20,9 @@ namespace AwayDay3
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-
+            Registration openForm = new Registration(logic);
+            openForm.Show();
+            Visible = false;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
