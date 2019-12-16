@@ -126,7 +126,7 @@ namespace AwayDay3
         {
             using (var context = new MyDBEntities())
             {
-                return context.Communications.ToList<CommunicationRecord>();
+                return context.Communications.Where(x => x.companyName == companyName).ToList<CommunicationRecord>();
             }
         }
 
