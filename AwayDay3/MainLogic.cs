@@ -48,6 +48,8 @@ namespace AwayDay3
             {
                 database.AddCustomer(fName, lName, companyName, departmentName, companyEmail, address, city, postCode, phoneNumber);
                 logIn(companyName, departmentName);
+                database.addCommunication(0, loggedInCompany.CompanyName, loggedInDepartment.DepartmentName,
+                false, 0, DateTime.Now, "Company and Department registered");
                 return "Company and department registered";
             }
 
@@ -55,6 +57,9 @@ namespace AwayDay3
            else if (departmentFound == false && companyFound == true)
             {
                 database.AddDepartment(companyName, departmentName);
+                logIn(companyName, departmentName);
+                database.addCommunication(0, loggedInCompany.CompanyName, loggedInDepartment.DepartmentName,
+                false, 0, DateTime.Now, "Department registered");
                 return "New department registered to existing company";
             }
             //if both exist
@@ -65,7 +70,17 @@ namespace AwayDay3
             }
         }
 
+        public string getCustomerCommunications()
+        {
+            List<CommunicationRecord> comms = database.getCommunications(loggedInCompany.CompanyName);
+            String allMessages = "";
+            foreach(CommunicationRecord comm in comms)
+            {
+                allMessages = allMessages + comm.companyName + " - " + comm.departmentName + " - " + comm.messageText + "/n";
+            }
+            return allMessages;
 
+        }
 
         public String logIn(String companyName, String departmentName)
         {

@@ -57,5 +57,12 @@ namespace AwayDay3
             logic.loggedInCompany.postCode = txtPostCode.Text;
             logic.loggedInCompany.phone = txtBusinessPhone.Text;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Main openForm = new Main(logic);
+            openForm.Show();
+            Visible = false;
+        }
     }
 }

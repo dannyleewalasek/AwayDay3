@@ -38,6 +38,7 @@
             this.lblFindClient = new System.Windows.Forms.Label();
             this.btnImportMessage = new System.Windows.Forms.Button();
             this.gbxCommunication = new System.Windows.Forms.GroupBox();
+            this.gbxCommunication.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCommunication
@@ -114,21 +115,23 @@
             // 
             // btnImportMessage
             // 
-            this.btnImportMessage.Location = new System.Drawing.Point(474, 88);
+            this.btnImportMessage.Location = new System.Drawing.Point(462, 19);
             this.btnImportMessage.Name = "btnImportMessage";
             this.btnImportMessage.Size = new System.Drawing.Size(75, 42);
             this.btnImportMessage.TabIndex = 16;
-            this.btnImportMessage.Text = "Import Messages";
+            this.btnImportMessage.Text = "Home";
             this.btnImportMessage.UseVisualStyleBackColor = true;
             this.btnImportMessage.Click += new System.EventHandler(this.btnImportMessage_Click);
             // 
             // gbxCommunication
             // 
+            this.gbxCommunication.Controls.Add(this.btnImportMessage);
             this.gbxCommunication.Location = new System.Drawing.Point(12, 7);
             this.gbxCommunication.Name = "gbxCommunication";
             this.gbxCommunication.Size = new System.Drawing.Size(551, 294);
             this.gbxCommunication.TabIndex = 75;
             this.gbxCommunication.TabStop = false;
+            this.gbxCommunication.Enter += new System.EventHandler(this.gbxCommunication_Enter);
             // 
             // Communication
             // 
@@ -143,11 +146,12 @@
             this.Controls.Add(this.lblAddedOn);
             this.Controls.Add(this.txtFindClient);
             this.Controls.Add(this.lblFindClient);
-            this.Controls.Add(this.btnImportMessage);
             this.Controls.Add(this.gbxCommunication);
             this.Name = "Communication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Communication";
+            this.Load += new System.EventHandler(this.Communication_Load);
+            this.gbxCommunication.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

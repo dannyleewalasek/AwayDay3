@@ -223,7 +223,7 @@
             this.btnShowAccount.Name = "btnShowAccount";
             this.btnShowAccount.Size = new System.Drawing.Size(75, 42);
             this.btnShowAccount.TabIndex = 74;
-            this.btnShowAccount.Text = "Show Account";
+            this.btnShowAccount.Text = "Confirm Details";
             this.btnShowAccount.UseVisualStyleBackColor = true;
             this.btnShowAccount.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -275,6 +275,7 @@
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
+            this.Load += new System.EventHandler(this.Registration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -10,20 +10,22 @@ namespace AwayDay3
 {
     class CommunicationRecord
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int communcationID;
-        public String companyName;
-        public String departmentName;
-        public String requestID;
+        public int communicationID { get; set; }
+        public String companyName { get; set; }
+        public String departmentName { get; set; }
+        public int requestID { get; set; }
         public enum messageType
         {
             Email,
             Post,
             Telephone
         }
-        public messageType communcationType;
-        public DateTime timeCreated;
-        public bool disagreementFlagged;
+        public messageType communcationType { get; set; }
+        public DateTime timeCreated { get; set; }
+        public bool disagreementFlagged { get; set; }
+        public string messageText { get; set; }
 
         public CommunicationRecord()
         {

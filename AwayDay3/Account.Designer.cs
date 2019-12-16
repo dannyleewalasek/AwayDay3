@@ -56,6 +56,8 @@
             this.btnEvent = new System.Windows.Forms.Button();
             this.gbxDetails = new System.Windows.Forms.GroupBox();
             this.gbxCommunication = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.gbxCommunication.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -216,7 +218,7 @@
             this.textBox1.Location = new System.Drawing.Point(276, 42);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 232);
+            this.textBox1.Size = new System.Drawing.Size(156, 183);
             this.textBox1.TabIndex = 23;
             // 
             // lblCommunication
@@ -285,11 +287,22 @@
             // 
             // gbxCommunication
             // 
+            this.gbxCommunication.Controls.Add(this.button1);
             this.gbxCommunication.Location = new System.Drawing.Point(264, 14);
             this.gbxCommunication.Name = "gbxCommunication";
             this.gbxCommunication.Size = new System.Drawing.Size(178, 322);
             this.gbxCommunication.TabIndex = 75;
             this.gbxCommunication.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 222);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 42);
+            this.button1.TabIndex = 76;
+            this.button1.Text = "Home";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Account
             // 
@@ -327,6 +340,7 @@
             this.Name = "Account";
             this.Text = "Account";
             this.Load += new System.EventHandler(this.Account_Load);
+            this.gbxCommunication.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,5 +376,6 @@
         private System.Windows.Forms.Button btnEvent;
         private System.Windows.Forms.GroupBox gbxDetails;
         private System.Windows.Forms.GroupBox gbxCommunication;
+        private System.Windows.Forms.Button button1;
     }
 }

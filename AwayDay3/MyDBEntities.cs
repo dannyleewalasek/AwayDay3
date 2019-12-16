@@ -79,6 +79,24 @@ namespace AwayDay3
             }
         }
         
+        public void addCommunication(CommunicationRecord.messageType commType, string cName, string dName, bool disagreement,
+                    int requestID, DateTime time, string messageText)
+        {
+            using (var context = new MyDBEntities())
+            {
+                CommunicationRecord comm = new CommunicationRecord();
+                comm.communcationType = commType;
+                comm.companyName = cName;
+                comm.departmentName = dName;
+                comm.disagreementFlagged = disagreement;
+                comm.requestID = requestID;
+                comm.timeCreated = time;
+                comm.messageText = messageText;
+
+                context.Communications.Add(comm);
+                context.SaveChanges();
+            }
+        }
         
         public List<Department> GetDepartments()
         {
@@ -101,6 +119,14 @@ namespace AwayDay3
             using (var context = new MyDBEntities())
             {
                 return context.Requests.ToList<Request>();
+            }
+        }
+
+        public List<CommunicationRecord> getCommunications(string companyName)
+        {
+            using (var context = new MyDBEntities())
+            {
+                return context.Communications.ToList<CommunicationRecord>();
             }
         }
 
@@ -138,7 +164,7 @@ namespace AwayDay3
         public DbSet<Company> Companys { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Request> Requests { get; set; }
-      //  public DbSet<CommunicationRecord> Communications { get; set; }
+        public DbSet<CommunicationRecord> Communications { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
