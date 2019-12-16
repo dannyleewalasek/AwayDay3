@@ -33,10 +33,12 @@ namespace AwayDay3
         private void Communication_Load(object sender, EventArgs e)
         {
             txtCommunication.Text = logic.getCustomerCommunications();
+            company_label.Text = logic.loggedInCompany.CompanyName;
         }
 
         private void gbxCommunication_Enter(object sender, EventArgs e)
         {
         }
+        
     }
 }

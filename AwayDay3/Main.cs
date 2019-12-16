@@ -52,5 +52,19 @@ namespace AwayDay3
         private void btnCancellations_Click(object sender, EventArgs e)
         {
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form1 openForm = new Form1(logic);
+            openForm.Show();
+            Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Account openForm = new Account(logic);
+            openForm.Show();
+            Visible = false;
+        }
     }
 }

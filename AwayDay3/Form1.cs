@@ -17,6 +17,11 @@ namespace AwayDay3
         {
             InitializeComponent();
         }
+        public Form1(MainLogic logic)
+        {
+            InitializeComponent();
+            this.logic = logic;
+        }
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
@@ -24,19 +29,18 @@ namespace AwayDay3
             openForm.Show();
             Visible = false;
         }
+        
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Login openForm = new Login();
+            Main openForm = new Main(logic);
             openForm.Show();
             Visible = false;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Main openForm = new Main();
-            openForm.Show();
-            Visible = false;
+            status_label.Text = logic.logIn(txtFirstName.Text, txtLastName.Text);
         }
     }
 }

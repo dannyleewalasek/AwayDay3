@@ -32,10 +32,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnBookings = new System.Windows.Forms.Button();
             this.btnPayments = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gbxMain = new System.Windows.Forms.GroupBox();
             this.btnBilling = new System.Windows.Forms.Button();
             this.btnCancellations = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.gbxMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,27 +80,21 @@
             this.btnPayments.UseVisualStyleBackColor = true;
             this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(84, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(306, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Find Existing Client";
-            // 
             // gbxMain
             // 
+            this.gbxMain.Controls.Add(this.button4);
+            this.gbxMain.Controls.Add(this.button3);
             this.gbxMain.Controls.Add(this.btnBilling);
             this.gbxMain.Controls.Add(this.btnCancellations);
-            this.gbxMain.Location = new System.Drawing.Point(61, 78);
+            this.gbxMain.Location = new System.Drawing.Point(61, 58);
             this.gbxMain.Name = "gbxMain";
-            this.gbxMain.Size = new System.Drawing.Size(354, 204);
+            this.gbxMain.Size = new System.Drawing.Size(354, 224);
             this.gbxMain.TabIndex = 5;
             this.gbxMain.TabStop = false;
             // 
             // btnBilling
             // 
-            this.btnBilling.Location = new System.Drawing.Point(23, 142);
+            this.btnBilling.Location = new System.Drawing.Point(23, 162);
             this.btnBilling.Name = "btnBilling";
             this.btnBilling.Size = new System.Drawing.Size(150, 40);
             this.btnBilling.TabIndex = 7;
@@ -109,7 +104,7 @@
             // 
             // btnCancellations
             // 
-            this.btnCancellations.Location = new System.Drawing.Point(179, 142);
+            this.btnCancellations.Location = new System.Drawing.Point(179, 162);
             this.btnCancellations.Name = "btnCancellations";
             this.btnCancellations.Size = new System.Drawing.Size(150, 40);
             this.btnCancellations.TabIndex = 6;
@@ -117,12 +112,31 @@
             this.btnCancellations.UseVisualStyleBackColor = true;
             this.btnCancellations.Click += new System.EventHandler(this.btnCancellations_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(23, 24);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(150, 40);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Customer sign in";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(179, 24);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(150, 40);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Account";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnPayments);
             this.Controls.Add(this.btnBookings);
             this.Controls.Add(this.button2);
@@ -133,7 +147,6 @@
             this.Text = "Main";
             this.gbxMain.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -143,9 +156,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnBookings;
         private System.Windows.Forms.Button btnPayments;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox gbxMain;
         private System.Windows.Forms.Button btnBilling;
         private System.Windows.Forms.Button btnCancellations;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
