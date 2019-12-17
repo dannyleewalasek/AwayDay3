@@ -107,12 +107,6 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="MainLogic.cs" />
-    <Compile Include="Message.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Message.Designer.cs">
-      <DependentUpon>Message.cs</DependentUpon>
-    </Compile>
     <Compile Include="MyDBEntities.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,9 +131,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Message.resx">
-      <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

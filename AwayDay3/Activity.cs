@@ -17,6 +17,6 @@ namespace AwayDay3
         public String activity { get; set; }
         public int requestID;
         public bool priceRequested;
-        public DateTime date;
+        public DateTime date { get; set; }
     }
 }

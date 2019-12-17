@@ -98,7 +98,7 @@ namespace AwayDay3
         {
             using (var context = new MyDBEntities())
             {
-                var eventFound = context.Activities.SingleOrDefault(b => b.activity == key);
+                var eventFound = context.Activities.SingleOrDefault(b => b.activity == key && b.date.Day == date1.Day);
                 if (eventFound != null)
                     return true;
                 else
