@@ -59,19 +59,22 @@ namespace AwayDay3
                 d.companyName = companyName;
                 d.company = a;
 
-                database.AddCustomer(a,d);
+                database.addObject(a);
+                database.addObject(d);
                 logIn(companyName, departmentName);
-                database.addCommunication(0, loggedInCompany.CompanyName, loggedInDepartment.DepartmentName,
+                addCommunication(0, loggedInCompany.CompanyName, loggedInDepartment.DepartmentName,
                 false, 0, DateTime.Now, "Company and Department registered");
                 return "Company and department registered";
             }
-
             //If company departmentFound but department doesnt
            else if (departmentFound == false && companyFound == true)
             {
-                database.AddDepartment(companyName, departmentName);
+                Department d = new Department();
+                d.DepartmentName = companyName + " - " + departmentName;
+                d.companyName = companyName;
+                database.addObject(d);
                 logIn(companyName, departmentName);
-                database.addCommunication(0, loggedInCompany.CompanyName, loggedInDepartment.DepartmentName,
+                addCommunication(0, loggedInCompany.CompanyName, loggedInDepartment.DepartmentName,
                 false, 0, DateTime.Now, "Department registered");
                 return "New department registered to existing company";
             }
@@ -81,6 +84,20 @@ namespace AwayDay3
                 logIn(companyName, departmentName);
                 return "Company already registered, logged in";
             }
+        }
+
+        public void addCommunication(int commType, string cName, string dName, bool disagreement, int requestID, DateTime time,
+            string messageText)
+        {
+            CommunicationRecord comm = new CommunicationRecord();
+            comm.communcationType = (CommunicationRecord.messageType)commType;
+            comm.companyName = cName;
+            comm.departmentName = dName;
+            comm.disagreementFlagged = disagreement;
+            comm.requestID = requestID;
+            comm.timeCreated = time;
+            comm.messageText = messageText;
+            database.addObject(comm);
         }
 
         public string submitRequest(int numOfGuests,DateTime date1, DateTime date2, DateTime date3, List<KeyValuePair<string, bool>> activitys)
@@ -108,7 +125,7 @@ namespace AwayDay3
                 r.numberOfGuests = numOfGuests;
                 r.departmentName = loggedInDepartment.DepartmentName;
                 r.Date = date1;
-                database.AddRequest(r);
+                database.addObject(r);
                 foreach (KeyValuePair<string, bool> act in activitys)
                 {
                     Activity activity = new Activity();
@@ -116,7 +133,7 @@ namespace AwayDay3
                     activity.priceRequested = act.Value;
                     activity.date = date1;
                     activity.requestID = r.RequestID;
-                    database.addActivity(activity);
+                    database.addObject(activity);
                 }
                 return "event succesfully created, inform client they will \n be contacted with a pdf once pricing has been finalised";
             }

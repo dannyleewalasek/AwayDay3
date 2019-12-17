@@ -25,33 +25,21 @@ namespace AwayDay3
             }
         }
 
-        public void AddCustomer(Company company, Department department)
+        public void addObject<T>(T toAdd)
         {
             using (var context = new MyDBEntities())
             {
-                context.Companys.Add(company);
-                context.Departments.Add(department);
-                context.SaveChanges();
-            }
-        }
-
-        public void AddDepartment(String companyName, String departmentName)
-        {
-            using (var context = new MyDBEntities())
-            {
-                Department d = new Department();
-                d.DepartmentName = companyName + " - " + departmentName;
-                d.companyName = companyName;
-                context.Departments.Add(d);
-                context.SaveChanges();
-            }
-        }
-
-        public void AddRequest(Request request)
-        {
-            using (var context = new MyDBEntities())
-            {
-                context.Requests.Add(request);
+                object input = (object)toAdd;
+                if (typeof(T) == typeof(Company))
+                    context.Companys.Add((Company)input);
+                else if (typeof(T) == typeof(Department))
+                    context.Departments.Add((Department)input);
+                else if (typeof(T) == typeof(CommunicationRecord))
+                    context.Communications.Add((CommunicationRecord)input);
+                else if (typeof(T) == typeof(Request))
+                    context.Requests.Add((Request)input);
+                else if (typeof(T) == typeof(Activity))
+                    context.Activities.Add((Activity)input);
                 context.SaveChanges();
             }
         }
@@ -73,50 +61,21 @@ namespace AwayDay3
             }
             return companyFound;
         }
-
-        public void addCommunication(CommunicationRecord.messageType commType, string cName, string dName, bool disagreement,
-                    int requestID, DateTime time, string messageText)
-        {
-            using (var context = new MyDBEntities())
-            {
-                CommunicationRecord comm = new CommunicationRecord();
-                comm.communcationType = commType;
-                comm.companyName = cName;
-                comm.departmentName = dName;
-                comm.disagreementFlagged = disagreement;
-                comm.requestID = requestID;
-                comm.timeCreated = time;
-                comm.messageText = messageText;
-
-                context.Communications.Add(comm);
-                context.SaveChanges();
-            }
-        }
         
         public IList getObjects<T>(T input)
         {
             using (var context = new MyDBEntities())
             {
                 if (typeof(T) == typeof(Company))
-                {
                     return context.Companys.ToList<Company>();
-                }
                 else if (typeof(T) == typeof(Department))
-                {
                     return context.Departments.ToList<Department>();
-                }
                 else if (typeof(T) == typeof(CommunicationRecord))
-                {
                     return context.Communications.ToList<CommunicationRecord>();
-                }
                 else if (typeof(T) == typeof(Request))
-                {
                     return context.Requests.ToList<Request>();
-                }
                 else if (typeof(T) == typeof(Activity))
-                {
                     return context.Activities.ToList<Activity>();
-                }
                 else
                     return null;
             }
@@ -156,16 +115,6 @@ namespace AwayDay3
                 context.SaveChanges();
             }
         }
-
-        internal void addActivity(Activity a)
-        {
-            using (var context = new MyDBEntities())
-            {
-                context.Activities.Add(a);
-                context.SaveChanges();
-            }
-        }
-
 
         class MyDBEntities : DbContext
         {
