@@ -13,10 +13,7 @@ namespace AwayDay3
     {
         [Key]
         public String DepartmentName { get;set;}
-        public Company company { get; set; }
-        [ForeignKey("CompanyName")]
         public String companyName;
-
         public Department()
         {
 

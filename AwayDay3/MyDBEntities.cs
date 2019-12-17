@@ -10,8 +10,9 @@ using System.Collections;
 namespace AwayDay3
 {
 
-    class EntityDBAccessor
+    class EntityDBAccessor : DBAccessor
     {
+        //Used to update the customers detail, pass in a fully updated customer object and the old one will be replaced.
         public void UpdateCustomer(Company updatedCompany)
         {
             using (var context = new MyDBEntities())
@@ -25,6 +26,7 @@ namespace AwayDay3
             }
         }
 
+        //Generic method used to add objects of any type to the database.
         public void addObject<T>(T toAdd)
         {
             using (var context = new MyDBEntities())
@@ -44,6 +46,7 @@ namespace AwayDay3
             }
         }
 
+        //Using the company name retreive the company entity from the database
         public Company GetCompany(String companyName)
         {
             Company companyFound = new Company();
@@ -61,7 +64,7 @@ namespace AwayDay3
             }
             return companyFound;
         }
-        
+        //Generic method used to get a List of a specific type from the database.
         public IList getObjects<T>(T input)
         {
             using (var context = new MyDBEntities())
@@ -81,6 +84,7 @@ namespace AwayDay3
             }
         }
 
+        //Used to get all communication records tied to a specific customer.
         public List<CommunicationRecord> getCommunications(string companyName)
         {
             using (var context = new MyDBEntities())
@@ -89,6 +93,7 @@ namespace AwayDay3
             }
         }
 
+        //Check to see if a specific activity has been booked on a certain day.
         public bool checkForBookedActivity(string key, DateTime date1)
         {
             using (var context = new MyDBEntities())
@@ -101,6 +106,7 @@ namespace AwayDay3
             }
         }
 
+        //Weeds messages when ran according to a number of criteria.
         public void weedMessages()
         {
             using (var context = new MyDBEntities())
@@ -116,6 +122,7 @@ namespace AwayDay3
             }
         }
 
+        //Class used to communicate with the database.
         class MyDBEntities : DbContext
         {
             public MyDBEntities()

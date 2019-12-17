@@ -10,7 +10,7 @@ namespace AwayDay3
     {
         public Company loggedInCompany = new Company();
         public Department loggedInDepartment = new Department();
-        private EntityDBAccessor database = new EntityDBAccessor();
+        private DBAccessor database = new EntityDBAccessor();
 
         public MainLogic()
         {
@@ -57,8 +57,6 @@ namespace AwayDay3
                 a.phone = phoneNumber;
                 d.DepartmentName = companyName + " - " + departmentName;
                 d.companyName = companyName;
-                d.company = a;
-
                 database.addObject(a);
                 database.addObject(d);
                 logIn(companyName, departmentName);

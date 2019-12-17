@@ -86,6 +86,7 @@
     </Compile>
     <Compile Include="CommunicationRecord.cs" />
     <Compile Include="Company.cs" />
+    <Compile Include="DBAccessor.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Events.cs">
       <SubType>Form</SubType>
