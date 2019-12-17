@@ -14,9 +14,6 @@ namespace AwayDay3
         [Key]
         public String DepartmentName { get;set;}
         public String companyName;
-        public Department()
-        {
-
-        }
+        public Department() {}
     }
 }

@@ -43,10 +43,5 @@ namespace AwayDay3
             openForm.Show();
             Visible = false;
         }
-
-        private void Registration_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

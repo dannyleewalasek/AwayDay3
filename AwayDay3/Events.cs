@@ -61,5 +61,6 @@ namespace AwayDay3
             KeyValuePair<string, bool> activity = new KeyValuePair<string, bool>(txt_activity.Text, box_pricerequest.Checked);
             activitys.Add(activity);
         }
+       
     }
 }

@@ -37,22 +37,6 @@ namespace AwayDay3
             Visible = false;
         }
 
-        private void btnPayments_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnBookings_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnBilling_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnCancellations_Click(object sender, EventArgs e)
-        {
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Form1 openForm = new Form1(logic);
@@ -66,5 +50,6 @@ namespace AwayDay3
             openForm.Show();
             Visible = false;
         }
+       
     }
 }

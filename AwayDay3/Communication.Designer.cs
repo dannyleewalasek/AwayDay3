@@ -77,7 +77,6 @@
             this.gbxCommunication.Size = new System.Drawing.Size(551, 294);
             this.gbxCommunication.TabIndex = 75;
             this.gbxCommunication.TabStop = false;
-            this.gbxCommunication.Enter += new System.EventHandler(this.gbxCommunication_Enter);
             // 
             // label1
             // 

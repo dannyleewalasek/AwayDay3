@@ -34,11 +34,6 @@ namespace AwayDay3
         {
             txtCommunication.Text = logic.getCustomerCommunications();
             company_label.Text = logic.loggedInCompany.CompanyName;
-        }
-
-        private void gbxCommunication_Enter(object sender, EventArgs e)
-        {
-        }
-        
+        }        
     }
 }
