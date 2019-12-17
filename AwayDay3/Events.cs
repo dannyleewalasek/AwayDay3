@@ -13,6 +13,7 @@ namespace AwayDay3
     public partial class Events : Form
     {
         private MainLogic logic;
+        List<KeyValuePair<string, bool>> activitys;
         public Events()
         {
             InitializeComponent();
@@ -33,12 +34,33 @@ namespace AwayDay3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label_status.Text = logic.submitRequest((int)numguests.Value,dateTimePicker1.Value, dateTimePicker2.Value, dateTimePicker3.Value);
+            if (box_chocolate.Checked)
+            {
+                KeyValuePair<string, bool> act = new KeyValuePair<string, bool>("chocolate", true);
+                activitys.Add(act);
+            }
+            if (box_climbing.Checked)
+            {
+                KeyValuePair<string, bool> act = new KeyValuePair<string, bool>("climbing", true);
+                activitys.Add(act);
+            }
+            if (box_gocart.Checked)
+            {
+                KeyValuePair<string, bool> act = new KeyValuePair<string, bool>("gocart", true);
+                activitys.Add(act);
+            }
+            if (box_meditation.Checked)
+            {
+                KeyValuePair<string, bool> act = new KeyValuePair<string, bool>("meditation", true);
+                activitys.Add(act);
+            }
+            label_status.Text = logic.submitRequest((int)numguests.Value,dateTimePicker1.Value, dateTimePicker2.Value, dateTimePicker3.Value, activitys);
         }
 
-        private void Events_Load(object sender, EventArgs e)
+        private void btn_Add_Click(object sender, EventArgs e)
         {
-
+            KeyValuePair<string, bool> activity = new KeyValuePair<string, bool>(txt_activity.Text, box_pricerequest.Checked);
+            activitys.Add(activity);
         }
     }
 }

@@ -40,6 +40,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.gbxChoice = new System.Windows.Forms.GroupBox();
             this.gbxEventDetails = new System.Windows.Forms.GroupBox();
+            this.numguests = new System.Windows.Forms.NumericUpDown();
             this.box_pricerequest = new System.Windows.Forms.CheckBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.txt_activity = new System.Windows.Forms.TextBox();
@@ -57,7 +58,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_status = new System.Windows.Forms.Label();
-            this.numguests = new System.Windows.Forms.NumericUpDown();
             this.gbxEventDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numguests)).BeginInit();
             this.SuspendLayout();
@@ -173,6 +173,13 @@
             this.gbxEventDetails.TabIndex = 95;
             this.gbxEventDetails.TabStop = false;
             // 
+            // numguests
+            // 
+            this.numguests.Location = new System.Drawing.Point(119, 13);
+            this.numguests.Name = "numguests";
+            this.numguests.Size = new System.Drawing.Size(120, 20);
+            this.numguests.TabIndex = 104;
+            // 
             // box_pricerequest
             // 
             this.box_pricerequest.AutoSize = true;
@@ -190,6 +197,7 @@
             this.btn_Add.TabIndex = 102;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // txt_activity
             // 
@@ -325,13 +333,6 @@
             this.label_status.TabIndex = 96;
             this.label_status.Text = "Status information";
             // 
-            // numguests
-            // 
-            this.numguests.Location = new System.Drawing.Point(119, 13);
-            this.numguests.Name = "numguests";
-            this.numguests.Size = new System.Drawing.Size(120, 20);
-            this.numguests.TabIndex = 104;
-            // 
             // Events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,7 +352,6 @@
             this.Name = "Events";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Events";
-            this.Load += new System.EventHandler(this.Events_Load);
             this.gbxEventDetails.ResumeLayout(false);
             this.gbxEventDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numguests)).EndInit();

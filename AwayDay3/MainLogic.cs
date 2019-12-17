@@ -84,9 +84,9 @@ namespace AwayDay3
             }
         }
 
-        public string submitRequest(int numOfGuests,DateTime date1, DateTime date2, DateTime date3)
+        public string submitRequest(int numOfGuests,DateTime date1, DateTime date2, DateTime date3, List<KeyValuePair<string, bool>> activitys)
         {
-            //CODE TO CHECK OTHER REQUESTS FOR CLASHING DATES
+            //GO THROUGH ACTIVITYS, IF CONTAINS FACILITATED, CHECK IF ANY OTHER ARE CURRENTLY EXISTING
             Request r = new Request();
             r.numberOfGuests = numOfGuests;
             r.departmentName = loggedInDepartment.DepartmentName;
