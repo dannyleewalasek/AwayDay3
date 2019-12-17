@@ -22,37 +22,23 @@ namespace AwayDay3
             InitializeComponent();
             this.logic = logic;
         }
-
-        private void btnEstimateCost_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCost_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCost_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             Main openForm = new Main();
             openForm.Show();
             Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label_status.Text = logic.submitRequest((int)numguests.Value,dateTimePicker1.Value, dateTimePicker2.Value, dateTimePicker3.Value);
+        }
+
+        private void Events_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

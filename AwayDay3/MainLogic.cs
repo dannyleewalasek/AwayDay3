@@ -46,7 +46,21 @@ namespace AwayDay3
             //If company nor department exist, create new c & d
             if (departmentFound == false && companyFound == false)
             {
-                database.AddCustomer(fName, lName, companyName, departmentName, companyEmail, address, city, postCode, phoneNumber);
+                Company a = new Company();
+                Department d = new Department();
+                a.CompanyName = companyName;
+                a.companyEmail = companyEmail;
+                a.firstName = fName;
+                a.lastName = lName;
+                a.address = address;
+                a.city = city;
+                a.postCode = postCode;
+                a.phone = phoneNumber;
+                d.DepartmentName = companyName + " - " + departmentName;
+                d.companyName = companyName;
+                d.company = a;
+
+                database.AddCustomer(a,d);
                 logIn(companyName, departmentName);
                 database.addCommunication(0, loggedInCompany.CompanyName, loggedInDepartment.DepartmentName,
                 false, 0, DateTime.Now, "Company and Department registered");
@@ -68,6 +82,19 @@ namespace AwayDay3
                 logIn(companyName, departmentName);
                 return "Company already registered, logged in";
             }
+        }
+
+        public string submitRequest(int numOfGuests,DateTime date1, DateTime date2, DateTime date3)
+        {
+            //CODE TO CHECK OTHER REQUESTS FOR CLASHING DATES
+            Request r = new Request();
+            r.numberOfGuests = numOfGuests;
+            r.departmentName = loggedInDepartment.DepartmentName;
+            r.Date = date1;
+            database.AddRequest(r);
+
+            return "event succesfully created, inform client they will \n be contacted with a pdf once pricing has been finalised";
+
         }
 
         public string getCustomerCommunications()

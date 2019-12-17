@@ -4,17 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 
 namespace AwayDay3
 {
     class Request
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public String RequestID { get; set; }
-        public String companyName;
-        public String departmentName;
+        public int RequestID { get; set; }
+        public int numberOfGuests;
+        public string departmentName;
         public DateTime Date;
-        public List<Activity> activitys;
     }
 }

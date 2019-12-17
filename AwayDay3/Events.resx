@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Please enter additional activities 
+ you require one by 1 and click add, 
+you can choose to request the individual 
+price for this to be displayed on your invoice 
+by selecting the checkbox next to the add button</value>
+  </data>
 </root>

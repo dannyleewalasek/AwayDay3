@@ -25,26 +25,12 @@ namespace AwayDay3
             }
         }
 
-        public void AddCustomer(String fName, String lName, String companyName, String departmentName, String companyEmail,
-                                String address, String city, String postCode, String phoneNumber)
+        public void AddCustomer(Company company, Department department)
         {
                 using (var context = new MyDBEntities())
                 {
-                Company a = new Company();
-                Department d = new Department();
-                a.CompanyName = companyName;
-                a.companyEmail = companyEmail;
-                a.firstName = fName;
-                a.lastName = lName;
-                a.address = address;
-                a.city = city;
-                a.postCode = postCode;
-                a.phone = phoneNumber;
-                d.DepartmentName = companyName + " - " + departmentName;
-                d.companyName = companyName;
-                d.company = a;
-                context.Companys.Add(a);
-                context.Departments.Add(d);
+                context.Companys.Add(company);
+                context.Departments.Add(department);
                 context.SaveChanges();
                 }
         }
@@ -130,9 +116,13 @@ namespace AwayDay3
             }
         }
 
-        public void AddRequest()
+        public void AddRequest(Request request)
         {
-
+            using (var context = new MyDBEntities())
+            {
+                context.Requests.Add(request);
+                context.SaveChanges();
+            }
         }
 
         public void weedMessages()
