@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
-
+using System.Collections;
 
 namespace AwayDay3
 {
@@ -27,30 +27,12 @@ namespace AwayDay3
 
         public void AddCustomer(Company company, Department department)
         {
-                using (var context = new MyDBEntities())
-                {
+            using (var context = new MyDBEntities())
+            {
                 context.Companys.Add(company);
                 context.Departments.Add(department);
                 context.SaveChanges();
-                }
-        }
-        
-        public Company GetCompany(String companyName)
-        {
-            Company companyFound = new Company();
-            using (var context = new MyDBEntities())
-            {
-                List<Company> companys = context.Companys.ToList<Company>();
-                foreach(Company comp in companys)
-                {
-
-                    if (comp.CompanyName == companyName)
-                    {
-                        companyFound = comp;
-                    }
-                }
             }
-            return companyFound;
         }
 
         public void AddDepartment(String companyName, String departmentName)
@@ -64,7 +46,34 @@ namespace AwayDay3
                 context.SaveChanges();
             }
         }
-        
+
+        public void AddRequest(Request request)
+        {
+            using (var context = new MyDBEntities())
+            {
+                context.Requests.Add(request);
+                context.SaveChanges();
+            }
+        }
+
+        public Company GetCompany(String companyName)
+        {
+            Company companyFound = new Company();
+            using (var context = new MyDBEntities())
+            {
+                List<Company> companys = context.Companys.ToList<Company>();
+                foreach (Company comp in companys)
+                {
+
+                    if (comp.CompanyName == companyName)
+                    {
+                        companyFound = comp;
+                    }
+                }
+            }
+            return companyFound;
+        }
+
         public void addCommunication(CommunicationRecord.messageType commType, string cName, string dName, bool disagreement,
                     int requestID, DateTime time, string messageText)
         {
@@ -84,27 +93,32 @@ namespace AwayDay3
             }
         }
         
-        public List<Department> GetDepartments()
+        public IList getObjects<T>(T input)
         {
             using (var context = new MyDBEntities())
             {
-                return context.Departments.ToList<Department>();
-            }
-        }
-
-        public List<Company> GetCompanys()
-        {
-            using (var context = new MyDBEntities())
-            {
-                return context.Companys.ToList<Company>();
-            }
-        }
-
-        public List<Request> GetRequests()
-        {
-            using (var context = new MyDBEntities())
-            {
-                return context.Requests.ToList<Request>();
+                if (typeof(T) == typeof(Company))
+                {
+                    return context.Companys.ToList<Company>();
+                }
+                else if (typeof(T) == typeof(Department))
+                {
+                    return context.Departments.ToList<Department>();
+                }
+                else if (typeof(T) == typeof(CommunicationRecord))
+                {
+                    return context.Communications.ToList<CommunicationRecord>();
+                }
+                else if (typeof(T) == typeof(Request))
+                {
+                    return context.Requests.ToList<Request>();
+                }
+                else if (typeof(T) == typeof(Activity))
+                {
+                    return context.Activities.ToList<Activity>();
+                }
+                else
+                    return null;
             }
         }
 
@@ -116,12 +130,15 @@ namespace AwayDay3
             }
         }
 
-        public void AddRequest(Request request)
+        public bool checkForBookedActivity(string key, DateTime date1)
         {
             using (var context = new MyDBEntities())
             {
-                context.Requests.Add(request);
-                context.SaveChanges();
+                var eventFound = context.Activities.SingleOrDefault(b => b.activity == key);
+                if (eventFound != null)
+                    return true;
+                else
+                    return false;
             }
         }
 
@@ -129,37 +146,48 @@ namespace AwayDay3
         {
             using (var context = new MyDBEntities())
             {
-               // List<CommunicationRecord> communications = context.Communications.ToList<CommunicationRecord>();
-               // foreach(CommunicationRecord comm in communications)
+                // List<CommunicationRecord> communications = context.Communications.ToList<CommunicationRecord>();
+                // foreach(CommunicationRecord comm in communications)
                 {
                     ////Just need to reqrite this if statement.
-                  //   if (comm.disagreementFlagged && comm.timeCreated > 5 years ago  ) || (!comm.disagreementFlagged && comm.timeCreated > 1 year ago)
-              //      context.Communications.Remove(comm);
+                    //   if (comm.disagreementFlagged && comm.timeCreated > 5 years ago  ) || (!comm.disagreementFlagged && comm.timeCreated > 1 year ago)
+                    //      context.Communications.Remove(comm);
                 }
                 context.SaveChanges();
             }
         }
 
+        internal void addActivity(Activity a)
+        {
+            using (var context = new MyDBEntities())
+            {
+                context.Activities.Add(a);
+                context.SaveChanges();
+            }
+        }
+
+
+        class MyDBEntities : DbContext
+        {
+            public MyDBEntities()
+                : base("name=conString")
+            {
+
+                //  Database.SetInitializer(new MigrateDatabaseToLatestVersion<MyDBEntities);
+            }
+
+            public DbSet<Company> Companys { get; set; }
+            public DbSet<Department> Departments { get; set; }
+            public DbSet<Request> Requests { get; set; }
+            public DbSet<CommunicationRecord> Communications { get; set; }
+            public DbSet<Activity> Activities { get; set; }
+
+
+            protected override void OnModelCreating(DbModelBuilder modelBuilder)
+            {
+                base.OnModelCreating(modelBuilder);
+            }
+
+        }
     }
-
-    class MyDBEntities : DbContext
-    {
-        public MyDBEntities()
-            : base("name=conString")
-        {
-
-            //  Database.SetInitializer(new MigrateDatabaseToLatestVersion<MyDBEntities);
-        }
-
-        public DbSet<Company> Companys { get; set; }
-        public DbSet<Department> Departments { get; set; }
-        public DbSet<Request> Requests { get; set; }
-        public DbSet<CommunicationRecord> Communications { get; set; }
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
-
-    }   
 }

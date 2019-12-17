@@ -31,7 +31,7 @@ namespace AwayDay3
 
         private void btnEvent_Click(object sender, EventArgs e)
         {
-            Events openForm = new Events();
+            Events openForm = new Events(logic);
             openForm.Show();
             Visible = false;
 

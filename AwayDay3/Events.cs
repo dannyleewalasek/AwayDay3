@@ -13,7 +13,7 @@ namespace AwayDay3
     public partial class Events : Form
     {
         private MainLogic logic;
-        List<KeyValuePair<string, bool>> activitys;
+        List<KeyValuePair<string, bool>> activitys = new List<KeyValuePair<string, bool>>();
         public Events()
         {
             InitializeComponent();
@@ -23,7 +23,6 @@ namespace AwayDay3
             InitializeComponent();
             this.logic = logic;
         }
-        
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {

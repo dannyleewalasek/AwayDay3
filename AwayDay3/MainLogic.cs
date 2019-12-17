@@ -12,7 +12,6 @@ namespace AwayDay3
         public Department loggedInDepartment = new Department();
         private EntityDBAccessor database = new EntityDBAccessor();
 
-
         public MainLogic()
         {
         }
@@ -26,7 +25,7 @@ namespace AwayDay3
                                 String address, String city, String postCode, String phoneNumber)
         {
             //See if company is already registered
-            List<Company> companys = database.GetCompanys();
+            List<Company> companys = (List<Company>)database.getObjects(new Company());
             bool companyFound = false;
             foreach(Company comp in companys)
             {
@@ -35,7 +34,7 @@ namespace AwayDay3
             }
 
             //See if department is already registered
-            List<Department> depts = database.GetDepartments();
+            List<Department> depts = (List<Department>)database.getObjects(new Department());
             bool departmentFound = false;
             foreach(Department dept in depts)
             {
@@ -86,15 +85,41 @@ namespace AwayDay3
 
         public string submitRequest(int numOfGuests,DateTime date1, DateTime date2, DateTime date3, List<KeyValuePair<string, bool>> activitys)
         {
+            string[] facilitatedActivities = { "chocolate", "climbing", "gocart", "meditation" };
             //GO THROUGH ACTIVITYS, IF CONTAINS FACILITATED, CHECK IF ANY OTHER ARE CURRENTLY EXISTING
-            Request r = new Request();
-            r.numberOfGuests = numOfGuests;
-            r.departmentName = loggedInDepartment.DepartmentName;
-            r.Date = date1;
-            database.AddRequest(r);
+            bool foundFlag = false;
+            foreach (KeyValuePair<string,bool> act in activitys)
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    if (act.Key == facilitatedActivities[i])
+                    {
+                        if (database.checkForBookedActivity(act.Key, date1));
+                            foundFlag = true;
+                    }
+                }
+            }
+            if (foundFlag == true)
+                return "one of your requested activities is already booked on this date";
+            else
+            {
 
-            return "event succesfully created, inform client they will \n be contacted with a pdf once pricing has been finalised";
-
+                Request r = new Request();
+                r.numberOfGuests = numOfGuests;
+                r.departmentName = loggedInDepartment.DepartmentName;
+                r.Date = date1;
+                database.AddRequest(r);
+                foreach (KeyValuePair<string, bool> act in activitys)
+                {
+                    Activity activity = new Activity();
+                    activity.activity = act.Key;
+                    activity.priceRequested = act.Value;
+                    activity.date = date1;
+                    activity.requestID = r.RequestID;
+                    database.addActivity(activity);
+                }
+                return "event succesfully created, inform client they will \n be contacted with a pdf once pricing has been finalised";
+            }
         }
 
         public string getCustomerCommunications()
@@ -111,7 +136,7 @@ namespace AwayDay3
 
         public String logIn(String companyName, String departmentName)
         {
-            List<Department> depts = database.GetDepartments();
+            List<Department> depts = (List<Department>)database.getObjects(new Department());
             String departmentFound = "Failed to log in, company does not exist";
             foreach (Department dept in depts)
             {
