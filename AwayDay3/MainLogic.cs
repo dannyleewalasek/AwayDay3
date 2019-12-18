@@ -109,7 +109,7 @@ namespace AwayDay3
                 {
                     if (act.Key == facilitatedActivities[i])
                     {
-                        if (database.checkForBookedActivity(act.Key, date1));
+                        if (database.checkForBookedActivity(act.Key, date1))
                             foundFlag = true;
                     }
                 }
@@ -118,7 +118,6 @@ namespace AwayDay3
                 return "one of your requested activities is already booked on this date";
             else
             {
-
                 Request r = new Request();
                 r.numberOfGuests = numOfGuests;
                 r.departmentName = loggedInDepartment.DepartmentName;
