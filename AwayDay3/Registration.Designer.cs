@@ -47,10 +47,10 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.btnEvent = new System.Windows.Forms.Button();
             this.btnShowAccount = new System.Windows.Forms.Button();
             this.gbxRegistration = new System.Windows.Forms.GroupBox();
             this.txtstatus = new System.Windows.Forms.Label();
+            this.gbxRegistration.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtDepartment
@@ -199,7 +199,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(132, 283);
+            this.btnRegister.Location = new System.Drawing.Point(26, 272);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 42);
             this.btnRegister.TabIndex = 43;
@@ -207,28 +207,20 @@
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnEvent
-            // 
-            this.btnEvent.Location = new System.Drawing.Point(213, 284);
-            this.btnEvent.Name = "btnEvent";
-            this.btnEvent.Size = new System.Drawing.Size(75, 42);
-            this.btnEvent.TabIndex = 73;
-            this.btnEvent.Text = "New Event";
-            this.btnEvent.UseVisualStyleBackColor = true;
-            this.btnEvent.Click += new System.EventHandler(this.btnEvent_Click);
-            // 
             // btnShowAccount
             // 
-            this.btnShowAccount.Location = new System.Drawing.Point(387, 284);
+            this.btnShowAccount.Location = new System.Drawing.Point(12, 10);
             this.btnShowAccount.Name = "btnShowAccount";
             this.btnShowAccount.Size = new System.Drawing.Size(75, 42);
             this.btnShowAccount.TabIndex = 74;
-            this.btnShowAccount.Text = "Confirm Details";
+            this.btnShowAccount.Text = "Home";
             this.btnShowAccount.UseVisualStyleBackColor = true;
             this.btnShowAccount.Click += new System.EventHandler(this.button1_Click);
             // 
             // gbxRegistration
             // 
+            this.gbxRegistration.Controls.Add(this.txtstatus);
+            this.gbxRegistration.Controls.Add(this.btnRegister);
             this.gbxRegistration.Location = new System.Drawing.Point(76, 12);
             this.gbxRegistration.Name = "gbxRegistration";
             this.gbxRegistration.Size = new System.Drawing.Size(227, 329);
@@ -238,7 +230,7 @@
             // txtstatus
             // 
             this.txtstatus.AutoSize = true;
-            this.txtstatus.Location = new System.Drawing.Point(387, 111);
+            this.txtstatus.Location = new System.Drawing.Point(96, -3);
             this.txtstatus.Name = "txtstatus";
             this.txtstatus.Size = new System.Drawing.Size(35, 13);
             this.txtstatus.TabIndex = 76;
@@ -248,13 +240,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 361);
-            this.Controls.Add(this.txtstatus);
-            this.Controls.Add(this.btnShowAccount);
-            this.Controls.Add(this.btnEvent);
-            this.Controls.Add(this.btnRegister);
+            this.ClientSize = new System.Drawing.Size(356, 361);
             this.Controls.Add(this.txtDepartment);
             this.Controls.Add(this.lblDepartment);
+            this.Controls.Add(this.btnShowAccount);
             this.Controls.Add(this.txtPostCode);
             this.Controls.Add(this.txtBusinessPhone);
             this.Controls.Add(this.txtCity);
@@ -275,6 +264,8 @@
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
+            this.gbxRegistration.ResumeLayout(false);
+            this.gbxRegistration.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,7 +292,6 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Button btnEvent;
         private System.Windows.Forms.Button btnShowAccount;
         private System.Windows.Forms.GroupBox gbxRegistration;
         private System.Windows.Forms.Label txtstatus;

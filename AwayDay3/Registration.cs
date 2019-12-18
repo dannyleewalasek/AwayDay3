@@ -39,7 +39,7 @@ namespace AwayDay3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Account openForm = new Account(logic);
+            Main openForm = new Main(logic);
             openForm.Show();
             Visible = false;
         }
