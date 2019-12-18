@@ -111,12 +111,14 @@ namespace AwayDay3
         {
             using (var context = new MyDBEntities())
             {
-                // List<CommunicationRecord> communications = context.Communications.ToList<CommunicationRecord>();
-                // foreach(CommunicationRecord comm in communications)
+                 List<CommunicationRecord> communications = context.Communications.ToList<CommunicationRecord>();
+                 foreach(CommunicationRecord comm in communications)
                 {
-                    ////Just need to reqrite this if statement.
-                    //   if (comm.disagreementFlagged && comm.timeCreated > 5 years ago  ) || (!comm.disagreementFlagged && comm.timeCreated > 1 year ago)
-                    //      context.Communications.Remove(comm);
+                       //If the message was disagreed with and is older than 5 years.
+                       if (comm.disagreementFlagged && (comm.timeCreated.Year < DateTime.Now.Year-5))
+                          context.Communications.Remove(comm);
+                       else if (!comm.disagreementFlagged && (comm.timeCreated.Year < DateTime.Now.Year - 1))
+                        context.Communications.Remove(comm);
                 }
                 context.SaveChanges();
             }

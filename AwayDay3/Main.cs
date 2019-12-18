@@ -50,6 +50,10 @@ namespace AwayDay3
             openForm.Show();
             Visible = false;
         }
-       
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            logic.Weed();
+        }
     }
 }

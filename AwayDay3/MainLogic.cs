@@ -84,6 +84,11 @@ namespace AwayDay3
             }
         }
 
+        internal void Weed()
+        {
+            database.weedMessages();
+        }
+
         public void addCommunication(int commType, string cName, string dName, bool disagreement, int requestID, DateTime time,
             string messageText)
         {
