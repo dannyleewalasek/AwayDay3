@@ -60,18 +60,20 @@ namespace AwayDay3
                 database.addObject(a);
                 database.addObject(d);
                 logIn(companyName, departmentName);
-                addCommunication(0,false, 0, DateTime.Now, "Company and Department registered");
+                AddCommunication(0,false, 0, DateTime.Now, "Company and Department registered");
                 return "Company and department registered";
             }
             //If company departmentFound but department doesnt
            else if (departmentFound == false && companyFound == true)
             {
-                Department d = new Department();
-                d.DepartmentName = companyName + " - " + departmentName;
-                d.companyName = companyName;
+                Department d = new Department
+                {
+                    DepartmentName = companyName + " - " + departmentName,
+                    companyName = companyName
+                };
                 database.addObject(d);
                 logIn(companyName, departmentName);
-                addCommunication(0, false, 0, DateTime.Now, "Department registered");
+                AddCommunication(0, false, 0, DateTime.Now, "Department registered");
                 return "New department registered to existing company";
             }
             //if both exist
@@ -87,21 +89,23 @@ namespace AwayDay3
             database.weedMessages();
         }
 
-        public void addCommunication(int commType, bool disagreement, int requestID, DateTime time,
+        public void AddCommunication(int commType, bool disagreement, int requestID, DateTime time,
             string messageText)
         {
-            CommunicationRecord comm = new CommunicationRecord();
-            comm.communcationType = (CommunicationRecord.messageType)commType;
-            comm.companyName = loggedInCompany.CompanyName;
-            comm.departmentName = loggedInDepartment.DepartmentName;
-            comm.disagreementFlagged = disagreement;
-            comm.requestID = requestID;
-            comm.timeCreated = time;
-            comm.messageText = messageText;
+            CommunicationRecord comm = new CommunicationRecord
+            {
+                communcationType = (CommunicationRecord.messageType)commType,
+                companyName = loggedInCompany.CompanyName,
+                departmentName = loggedInDepartment.DepartmentName,
+                disagreementFlagged = disagreement,
+                requestID = requestID,
+                timeCreated = time,
+                messageText = messageText
+            };
             database.addObject(comm);
         }
 
-        public string submitRequest(int numOfGuests,DateTime date1, DateTime date2, DateTime date3, List<KeyValuePair<string, bool>> activitys)
+        public string SubmitRequest(int numOfGuests,DateTime date1, DateTime date2, DateTime date3, List<KeyValuePair<string, bool>> activitys)
         {
             string[] facilitatedActivities = { "chocolate", "climbing", "gocart", "meditation" };
             //GO THROUGH ACTIVITYS, IF CONTAINS FACILITATED, CHECK IF ANY OTHER ARE CURRENTLY EXISTING
@@ -121,18 +125,22 @@ namespace AwayDay3
                 return "one of your requested activities is already booked on this date";
             else
             {
-                Request r = new Request();
-                r.numberOfGuests = numOfGuests;
-                r.departmentName = loggedInDepartment.DepartmentName;
-                r.Date = date1;
+                Request r = new Request
+                {
+                    numberOfGuests = numOfGuests,
+                    departmentName = loggedInDepartment.DepartmentName,
+                    Date = date1
+                };
                 database.addObject(r);
                 foreach (KeyValuePair<string, bool> act in activitys)
                 {
-                    Activity activity = new Activity();
-                    activity.activity = act.Key;
-                    activity.priceRequested = act.Value;
-                    activity.date = date1;
-                    activity.requestID = r.RequestID;
+                    Activity activity = new Activity
+                    {
+                        activity = act.Key,
+                        priceRequested = act.Value,
+                        date = date1,
+                        requestID = r.RequestID
+                    };
                     database.addObject(activity);
                 }
                 return "event succesfully created, inform client they will \n be contacted with a pdf once pricing has been finalised";
