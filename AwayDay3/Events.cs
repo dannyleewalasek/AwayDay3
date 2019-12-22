@@ -26,7 +26,7 @@ namespace AwayDay3
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Main openForm = new Main();
+            Main openForm = new Main(logic);
             openForm.Show();
             Visible = false;
         }
@@ -54,6 +54,7 @@ namespace AwayDay3
                 activitys.Add(act);
             }
             label_status.Text = logic.submitRequest((int)numguests.Value,dateTimePicker1.Value, dateTimePicker2.Value, dateTimePicker3.Value, activitys);
+            logic.addCommunication(1,false, 0, DateTime.Now, "Request submitted for a new event");
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -61,6 +62,5 @@ namespace AwayDay3
             KeyValuePair<string, bool> activity = new KeyValuePair<string, bool>(txt_activity.Text, box_pricerequest.Checked);
             activitys.Add(activity);
         }
-       
     }
 }

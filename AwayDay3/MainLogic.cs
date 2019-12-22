@@ -60,8 +60,7 @@ namespace AwayDay3
                 database.addObject(a);
                 database.addObject(d);
                 logIn(companyName, departmentName);
-                addCommunication(0, loggedInCompany.CompanyName, loggedInDepartment.DepartmentName,
-                false, 0, DateTime.Now, "Company and Department registered");
+                addCommunication(0,false, 0, DateTime.Now, "Company and Department registered");
                 return "Company and department registered";
             }
             //If company departmentFound but department doesnt
@@ -72,8 +71,7 @@ namespace AwayDay3
                 d.companyName = companyName;
                 database.addObject(d);
                 logIn(companyName, departmentName);
-                addCommunication(0, loggedInCompany.CompanyName, loggedInDepartment.DepartmentName,
-                false, 0, DateTime.Now, "Department registered");
+                addCommunication(0, false, 0, DateTime.Now, "Department registered");
                 return "New department registered to existing company";
             }
             //if both exist
@@ -89,13 +87,13 @@ namespace AwayDay3
             database.weedMessages();
         }
 
-        public void addCommunication(int commType, string cName, string dName, bool disagreement, int requestID, DateTime time,
+        public void addCommunication(int commType, bool disagreement, int requestID, DateTime time,
             string messageText)
         {
             CommunicationRecord comm = new CommunicationRecord();
             comm.communcationType = (CommunicationRecord.messageType)commType;
-            comm.companyName = cName;
-            comm.departmentName = dName;
+            comm.companyName = loggedInCompany.CompanyName;
+            comm.departmentName = loggedInDepartment.DepartmentName;
             comm.disagreementFlagged = disagreement;
             comm.requestID = requestID;
             comm.timeCreated = time;
