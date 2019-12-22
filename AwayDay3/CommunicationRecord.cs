@@ -13,8 +13,8 @@ namespace AwayDay3
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int communicationID { get; set; }
-        public String companyName { get; set; }
-        public String departmentName { get; set; }
+        public string companyName { get; set; }
+        public string departmentName { get; set; }
         public int requestID { get; set; }
         public enum messageType
         {

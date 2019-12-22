@@ -16,13 +16,13 @@ namespace AwayDay3
         {
         }
 
-        public void UpdateCompany(String emailAddress)
+        public void UpdateCompany(string emailAddress)
         {
             database.UpdateCustomer(loggedInCompany);
         }
 
-        public String Register(String fName, String lName, String companyName, String departmentName, String companyEmail, 
-                                String address, String city, String postCode, String phoneNumber)
+        public string Register(string fName, string lName, string companyName, string departmentName, string companyEmail, 
+                                string address, string city, string postCode, string phoneNumber)
         {
             //See if company is already registered
             List<Company> companys = (List<Company>)database.getObjects(new Company());
@@ -150,7 +150,7 @@ namespace AwayDay3
         public string getCustomerCommunications()
         {
             List<CommunicationRecord> comms = database.getCommunications(loggedInCompany.CompanyName);
-            String allMessages = "";
+            string allMessages = "";
             foreach(CommunicationRecord comm in comms)
             {
                 allMessages = allMessages + comm.companyName + " - " + comm.departmentName + " - " + comm.messageText + " - " + comm.timeCreated + System.Environment.NewLine;
@@ -159,10 +159,10 @@ namespace AwayDay3
 
         }
 
-        public String logIn(String companyName, String departmentName)
+        public string logIn(string companyName, string departmentName)
         {
             List<Department> depts = (List<Department>)database.getObjects(new Department());
-            String departmentFound = "Failed to log in, company does not exist";
+            string departmentFound = "Failed to log in, company does not exist";
             foreach (Department dept in depts)
             {
                 if (dept.DepartmentName == companyName + " - " + departmentName)

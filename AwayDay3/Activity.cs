@@ -14,7 +14,7 @@ namespace AwayDay3
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int ActivityID { get; set; }
-        public String activity { get; set; }
+        public string activity { get; set; }
         public int requestID;
         public bool priceRequested;
         public DateTime date { get; set; }

@@ -47,7 +47,7 @@ namespace AwayDay3
         }
 
         //Using the company name retreive the company entity from the database
-        public Company GetCompany(String companyName)
+        public Company GetCompany(string companyName)
         {
             Company companyFound = new Company();
             using (var context = new MyDBEntities())
@@ -128,7 +128,7 @@ namespace AwayDay3
         class MyDBEntities : DbContext
         {
             public MyDBEntities()
-                : base("name=conString")
+                : base("name=constring")
             {
 
                 //  Database.SetInitializer(new MigrateDatabaseToLatestVersion<MyDBEntities);

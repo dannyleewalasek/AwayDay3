@@ -12,8 +12,8 @@ namespace AwayDay3
     public class Department
     {
         [Key]
-        public String DepartmentName { get;set;}
-        public String companyName;
+        public string DepartmentName { get;set;}
+        public string companyName;
         public Department() {}
     }
 }

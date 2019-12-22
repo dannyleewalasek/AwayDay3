@@ -11,7 +11,7 @@ namespace AwayDay3
     {
         void UpdateCustomer(Company updateCompany);
         void addObject<T>(T toAdd);
-        Company GetCompany(String companyName);
+        Company GetCompany(string companyName);
         IList getObjects<T>(T input);
         List<CommunicationRecord> getCommunications(string companyName);
         bool checkForBookedActivity(string key, DateTime date1);
