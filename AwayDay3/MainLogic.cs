@@ -153,7 +153,7 @@ namespace AwayDay3
             String allMessages = "";
             foreach(CommunicationRecord comm in comms)
             {
-                allMessages = allMessages + comm.companyName + " - " + comm.departmentName + " - " + comm.messageText + comm.timeCreated + "\n";
+                allMessages = allMessages + comm.companyName + " - " + comm.departmentName + " - " + comm.messageText + " - " + comm.timeCreated + System.Environment.NewLine;
             }
             return allMessages;
 
