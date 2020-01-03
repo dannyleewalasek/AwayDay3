@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Danny Walasek
+ * Radoslaw Warowny    
+ */
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;

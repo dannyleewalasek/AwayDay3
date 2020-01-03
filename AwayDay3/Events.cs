@@ -5,6 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+/*
+ * Danny Walasek
+ * Radoslaw Warowny    
+ */
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
