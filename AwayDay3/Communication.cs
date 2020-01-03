@@ -17,16 +17,18 @@ namespace AwayDay3
     public partial class Communication : Form
     {
         MainLogic logic;
+
         public Communication()
         {
             InitializeComponent();
         }
+
         public Communication(MainLogic logic)
         {
             InitializeComponent();
             this.logic = logic;
         }
-
+        // Home button
         private void btnImportMessage_Click(object sender, EventArgs e)
         {
             Main openForm = new Main(logic);
@@ -34,6 +36,7 @@ namespace AwayDay3
             Visible = false;
         }
 
+        // On load of the form, request all communications with the currently logged in department.
         private void Communication_Load(object sender, EventArgs e)
         {
             txtCommunication.Text = logic.getCustomerCommunications();
