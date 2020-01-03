@@ -56,6 +56,7 @@ namespace AwayDay3
             logic.loggedInCompany.address = txtBusinessAddress.Text;
             logic.loggedInCompany.postCode = txtPostCode.Text;
             logic.loggedInCompany.phone = txtBusinessPhone.Text;
+            logic.UpdateCompany();
         }
 
         private void button1_Click(object sender, EventArgs e)

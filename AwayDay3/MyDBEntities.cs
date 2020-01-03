@@ -13,16 +13,23 @@ namespace AwayDay3
     class EntityDBAccessor : DBAccessor
     {
         //Used to update the customers detail, pass in a fully updated customer object and the old one will be replaced.
-        public void UpdateCustomer(Company updatedCompany)
+        public void UpdateCustomer(Company updatedCompany, Department updatedDepartment)
         {
             using (var context = new MyDBEntities())
             {
                 var companyFound = context.Companys.SingleOrDefault(b => b.CompanyName == updatedCompany.CompanyName);
                 if (companyFound != null)
                 {
-                    companyFound.companyEmail = updatedCompany.companyEmail;
-                    context.SaveChanges();
+                    context.Companys.Remove(companyFound);
+                    context.Companys.Add(updatedCompany);
                 }
+                var departmentFound = context.Departments.SingleOrDefault(b => b.DepartmentName == updatedDepartment.DepartmentName);
+                if (departmentFound != null)
+                {
+                    context.Departments.Remove(departmentFound);
+                    context.Departments.Add(updatedDepartment);
+                }
+                context.SaveChanges();
             }
         }
 

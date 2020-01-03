@@ -9,7 +9,7 @@ namespace AwayDay3
 {
     interface DBAccessor
     {
-        void UpdateCustomer(Company updateCompany);
+        void UpdateCustomer(Company updateCompany, Department updatedDepartment);
         void addObject<T>(T toAdd);
         Company GetCompany(string companyName);
         IList getObjects<T>(T input);

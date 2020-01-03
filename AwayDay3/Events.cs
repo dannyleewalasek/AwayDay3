@@ -53,8 +53,13 @@ namespace AwayDay3
                 KeyValuePair<string, bool> act = new KeyValuePair<string, bool>("meditation", true);
                 activitys.Add(act);
             }
-            label_status.Text = logic.SubmitRequest((int)numguests.Value,dateTimePicker1.Value, dateTimePicker2.Value, dateTimePicker3.Value, activitys);
-            logic.AddCommunication(1,false, 0, DateTime.Now, "Request submitted for a new event");
+            if (activitys.Capacity > 0)
+            {
+                label_status.Text = logic.SubmitRequest((int)numguests.Value, dateTimePicker1.Value, dateTimePicker2.Value, dateTimePicker3.Value, activitys);
+                logic.AddCommunication(1, false, 0, DateTime.Now, "Request submitted for a new event");
+            }
+            else
+                label_status.Text = "At least one activity must be selected";
         }
 
         private void btn_Add_Click(object sender, EventArgs e)

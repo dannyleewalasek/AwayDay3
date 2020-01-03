@@ -16,9 +16,9 @@ namespace AwayDay3
         {
         }
 
-        public void UpdateCompany(string emailAddress)
+        public void UpdateCompany()
         {
-            database.UpdateCustomer(loggedInCompany);
+            database.UpdateCustomer(loggedInCompany,loggedInDepartment);
         }
 
         public string Register(string fName, string lName, string companyName, string departmentName, string companyEmail, 

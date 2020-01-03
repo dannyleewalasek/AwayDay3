@@ -230,7 +230,7 @@
             // txtstatus
             // 
             this.txtstatus.AutoSize = true;
-            this.txtstatus.Location = new System.Drawing.Point(96, -3);
+            this.txtstatus.Location = new System.Drawing.Point(16, 316);
             this.txtstatus.Name = "txtstatus";
             this.txtstatus.Size = new System.Drawing.Size(35, 13);
             this.txtstatus.TabIndex = 76;
