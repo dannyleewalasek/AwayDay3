@@ -46,6 +46,10 @@ namespace AwayDay3
         {
             status_label.Text = logic.logIn(txtFirstName.Text, txtLastName.Text);
         }
-        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
