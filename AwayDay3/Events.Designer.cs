@@ -75,7 +75,7 @@
             // lblEventName
             // 
             this.lblEventName.AutoSize = true;
-            this.lblEventName.Location = new System.Drawing.Point(1, 15);
+            this.lblEventName.Location = new System.Drawing.Point(7, 16);
             this.lblEventName.Name = "lblEventName";
             this.lblEventName.Size = new System.Drawing.Size(106, 13);
             this.lblEventName.TabIndex = 37;
@@ -83,7 +83,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(467, 426);
+            this.button1.Location = new System.Drawing.Point(561, 420);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 42);
             this.button1.TabIndex = 72;
@@ -169,7 +169,7 @@
             this.gbxEventDetails.Controls.Add(this.lblEventName);
             this.gbxEventDetails.Location = new System.Drawing.Point(23, 64);
             this.gbxEventDetails.Name = "gbxEventDetails";
-            this.gbxEventDetails.Size = new System.Drawing.Size(281, 441);
+            this.gbxEventDetails.Size = new System.Drawing.Size(307, 404);
             this.gbxEventDetails.TabIndex = 95;
             this.gbxEventDetails.TabStop = false;
             // 
@@ -177,13 +177,13 @@
             // 
             this.numguests.Location = new System.Drawing.Point(119, 13);
             this.numguests.Name = "numguests";
-            this.numguests.Size = new System.Drawing.Size(120, 20);
+            this.numguests.Size = new System.Drawing.Size(88, 20);
             this.numguests.TabIndex = 104;
             // 
             // box_pricerequest
             // 
             this.box_pricerequest.AutoSize = true;
-            this.box_pricerequest.Location = new System.Drawing.Point(171, 368);
+            this.box_pricerequest.Location = new System.Drawing.Point(147, 371);
             this.box_pricerequest.Name = "box_pricerequest";
             this.box_pricerequest.Size = new System.Drawing.Size(15, 14);
             this.box_pricerequest.TabIndex = 103;
@@ -191,7 +191,7 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(192, 362);
+            this.btn_Add.Location = new System.Drawing.Point(168, 366);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(75, 23);
             this.btn_Add.TabIndex = 102;
@@ -210,16 +210,17 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 285);
+            this.label11.Location = new System.Drawing.Point(5, 279);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(238, 65);
+            this.label11.Size = new System.Drawing.Size(238, 78);
             this.label11.TabIndex = 100;
             this.label11.Text = resources.GetString("label11.Text");
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(102, 266);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(6, 256);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 13);
             this.label10.TabIndex = 99;
@@ -318,7 +319,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 74);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 38;
@@ -337,7 +339,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 517);
+            this.ClientSize = new System.Drawing.Size(669, 479);
             this.Controls.Add(this.label_status);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

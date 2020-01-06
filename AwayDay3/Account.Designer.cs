@@ -48,8 +48,8 @@
             this.lblDepartment = new System.Windows.Forms.Label();
             this.btnEvent = new System.Windows.Forms.Button();
             this.gbxDetails = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.gbxDetails.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -199,7 +199,7 @@
             // 
             // btnEvent
             // 
-            this.btnEvent.Location = new System.Drawing.Point(77, 277);
+            this.btnEvent.Location = new System.Drawing.Point(105, 277);
             this.btnEvent.Name = "btnEvent";
             this.btnEvent.Size = new System.Drawing.Size(75, 42);
             this.btnEvent.TabIndex = 72;
@@ -235,16 +235,7 @@
             this.gbxDetails.Size = new System.Drawing.Size(286, 325);
             this.gbxDetails.TabIndex = 74;
             this.gbxDetails.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 42);
-            this.button1.TabIndex = 76;
-            this.button1.Text = "Home";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.gbxDetails.Enter += new System.EventHandler(this.gbxDetails_Enter);
             // 
             // btnUpdate
             // 
@@ -255,6 +246,16 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 42);
+            this.button1.TabIndex = 76;
+            this.button1.Text = "Home";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Account
             // 

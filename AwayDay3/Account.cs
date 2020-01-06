@@ -1,6 +1,7 @@
 ﻿/*
  * Danny Walasek
- * Radoslaw Warowny    
+ * Radoslaw Warowny   
+ * 
  */
 using System;
 using System.Collections.Generic;
@@ -72,6 +73,11 @@ namespace AwayDay3
             Main openForm = new Main(logic);
             openForm.Show();
             Visible = false;
+        }
+
+        private void gbxDetails_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

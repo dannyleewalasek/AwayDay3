@@ -42,7 +42,7 @@
             // 
             this.lblSignup.AutoSize = true;
             this.lblSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignup.Location = new System.Drawing.Point(82, 31);
+            this.lblSignup.Location = new System.Drawing.Point(106, 38);
             this.lblSignup.Name = "lblSignup";
             this.lblSignup.Size = new System.Drawing.Size(193, 29);
             this.lblSignup.TabIndex = 2;
@@ -50,7 +50,7 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(105, 72);
+            this.txtFirstName.Location = new System.Drawing.Point(129, 79);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(140, 20);
             this.txtFirstName.TabIndex = 3;
@@ -58,7 +58,7 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(105, 109);
+            this.txtLastName.Location = new System.Drawing.Point(129, 116);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(140, 20);
             this.txtLastName.TabIndex = 4;
@@ -66,7 +66,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(27, 148);
+            this.btnSubmit.Location = new System.Drawing.Point(51, 155);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(296, 40);
             this.btnSubmit.TabIndex = 7;
@@ -83,14 +83,14 @@
             this.gbxSignup.Controls.Add(this.txtLastName);
             this.gbxSignup.Location = new System.Drawing.Point(69, 33);
             this.gbxSignup.Name = "gbxSignup";
-            this.gbxSignup.Size = new System.Drawing.Size(347, 201);
+            this.gbxSignup.Size = new System.Drawing.Size(403, 201);
             this.gbxSignup.TabIndex = 76;
             this.gbxSignup.TabStop = false;
             // 
             // status_label
             // 
             this.status_label.AutoSize = true;
-            this.status_label.Location = new System.Drawing.Point(102, 10);
+            this.status_label.Location = new System.Drawing.Point(126, 17);
             this.status_label.Name = "status_label";
             this.status_label.Size = new System.Drawing.Size(145, 13);
             this.status_label.TabIndex = 8;
@@ -110,12 +110,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 245);
+            this.ClientSize = new System.Drawing.Size(514, 245);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gbxSignup);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.gbxSignup.ResumeLayout(false);
             this.gbxSignup.PerformLayout();
             this.ResumeLayout(false);
