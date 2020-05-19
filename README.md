@@ -43,14 +43,6 @@
   <p align="center">
     Small solo university project using C# with the unity framework.
     <br />
-    <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo/issues">Request Feature</a>
   </p>
 </p>
 
@@ -78,15 +70,15 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
+This program was created for a university project. The aim of the software being
+to create a system to allow clients to register their companies for staff
+training days.
 
 
 ### Built With
 
-* []()
-* []()
+* [C# .NET]()
+* [Visual Studio]()
 * []()
 
 
