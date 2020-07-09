@@ -4,9 +4,9 @@
 <br />
 <p align="center">
   <a href="https://github.com/dannyleewalasek/AwayDay3">
-    <img src="images/Screen1.jpg" alt="Logo" width="80" height="80">
-    <img src="images/Screen2.jpg" alt="Logo" width="80" height="80">
-    <img src="images/Screen3.jpg" alt="Logo" width="80" height="80">
+    <img src="images/Screen1.png" alt="Logo" width="80" height="80">
+    <img src="images/Screen2.png" alt="Logo" width="80" height="80">
+    <img src="images/Screen3.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">C# Winforms</h3>
