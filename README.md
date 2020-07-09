@@ -20,10 +20,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-    A small university project an event booking system using C# and the Entity Framework
-
+A small university project an event booking system using C# and the Entity Framework
 
 ### Built With
 
@@ -35,4 +32,4 @@
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-To execute a full run of the system launch the "MAIN" script
+Open VisualStudio solution "AwayDay3.sln" to compile and run from visual studio.
